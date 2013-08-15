@@ -1,4 +1,18 @@
-    <title>{{ page.title }}</title>
-		<link href="/css/syntax.css" rel="stylesheet" />
-		<link href="/css/site.css" rel="stylesheet" />
-		<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie|Nobile|Molengo' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Reenie+Beanie::latin', 'Nobile::latin', 'Molengo::latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>    
+    
+<title>{{ page.title }}</title>
+<link href="/css/syntax.css" rel="stylesheet" />
+<link href="/css/site.css" rel="stylesheet" />
