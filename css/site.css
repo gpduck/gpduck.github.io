@@ -10,13 +10,21 @@ body {
   font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 }
 
+#bodywrapper {
+  background-image: transparent url(/images/black50.png) repeat scroll top left;
+}
+
+#pageheader {
+  background: ;
+}
+
 span#blogtitle a {
   font-family: 'Reenie Beanie';
   font-size: 60px;
   font-style: normal;
   font-variant: normal;
-  text-decoration: none !important;
-  color: #ffffff !important;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 #post {
