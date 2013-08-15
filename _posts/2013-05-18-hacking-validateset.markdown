@@ -13,9 +13,9 @@ But that class wouldn't have come with the magic of ``ValidateSet``, and while I
 
 The result is the following function that takes a FunctionInfo object (use ``Get-Command``), the name of the parameter that is using ``ValidateSet``, and the new set of valid inputs.  It hacks its way into the command, locates the correct parameter, locates all the ``ValidateSet`` attributes on it, and rips into the heart of each one and replaces the private ``validValues`` array with the one provided in the ``-NewSet`` parameter.
 
-```powershell
+{% highlight powershell %}
 
 <#
 	.SYNOPSIS
 #>
-```
+{% endhighlight %}
