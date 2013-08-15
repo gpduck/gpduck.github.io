@@ -59,4 +59,42 @@ The result is the following function that takes a FunctionInfo object (use ``Get
 	.LINK
 		http://blog.whatsupduck.net/2013/05/hacking-validateset.html
 #>
+
+function Update-ValidateSet {
+	[CmdletBinding(SupportsShouldProcess=$true)]
+	param(
+		[Parameter(Mandatory=$true)]
+		[ValidateNotNullOrEmpty()]
+		[System.Management.Automation.FunctionInfo]$Command,
+
+		[Parameter(Mandatory=$true)]
+		[ValidateNotNullOrEmpty()]
+		[string]$ParameterName,
+
+		[Parameter(Mandatory=$true)]
+		[ValidateNotNullOrEmpty()]
+		[String[]]$NewSet
+	)
+
+	#Find the parameter on the command object
+	$Parameter = $Command.Parameters[$ParameterName]
+	if($Parameter) {
+		#Find all of the ValidateSet attributes on the parameter
+		$ValidateSetAttributes = @($Parameter.Attributes | Where-Object {$_ -is [System.Management.Automation.ValidateSetAttribute]})
+		if($ValidateSetAttributes) {
+			$ValidateSetAttributes | ForEach-Object {
+				#Get the validValues private member of the ValidateSetAttribute class
+				$ValidValuesField = [System.Management.Automation.ValidateSetAttribute].GetField("validValues", [System.Reflection.BindingFlags]::NonPublic -bor [System.Reflection.BindingFlags]::Instance)
+				if($PsCmdlet.ShouldProcess("$Command -$ParameterName", "Set valid set to: $($NewSet -join ', ')")) {
+					#Update the validValues array on each instance of ValidateSetAttribute
+					$ValidValuesField.SetValue($_, $NewSet)
+				}
+			}
+		} else {
+			Write-Error -Message "Parameter $ParameterName in command $Command doesn't use [ValidateSet()]"
+		}
+	} else {
+		Write-Error -Message "Parameter $ParameterName was not found in command $Command"
+	}
+}
 {% endhighlight %}
