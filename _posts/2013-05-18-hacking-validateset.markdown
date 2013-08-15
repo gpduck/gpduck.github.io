@@ -17,7 +17,6 @@ The result is the following function that takes a FunctionInfo object (use ``Get
 
 <#
 	.SYNOPSIS
-
 		Replace the set of valid values on a function parameter that was defined using ValidateSet.
 
 	.DESCRIPTION
