@@ -17,3 +17,16 @@
   font: normal normal 18px Nobile;
   color: #ffaa00;
 }
+
+#postcontent {
+  color: #ffffff;
+  background: #282828;
+}
+
+a:link {
+  color: #ff9900;
+}
+
+a:visited {
+  color: #dd7700;
+}
