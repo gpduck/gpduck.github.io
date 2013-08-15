@@ -2,6 +2,7 @@
 layout: post
 title: Hacking ValidateSet
 tags: [dotnet, hacking, powershell]
+author: { link: https://plus.google.com/111921112014612222144/about, name: Chris Duck }
 ---
 I guess I should start off this post by saying what I'm doing is a dirty hack, in no way supported, and in general a terrible idea.  But it's also really awesome.
 
