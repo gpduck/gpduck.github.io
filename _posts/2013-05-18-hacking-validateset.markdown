@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Hacking ValidateSet
 tags: [dotnet, hacking, powershell]
 ---
