@@ -4,3 +4,14 @@
   font-style: normal;
   font-variant: normal;
 }
+
+#postdate {
+  display: block;
+}
+
+#posttitle {
+  display: block;
+  margin: 0;
+  font: normal normal 18px Nobile;
+  color: #ffaa00;
+}
