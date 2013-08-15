@@ -19,7 +19,7 @@ body {
 }
 
 span#blogtitle a {
-  font-family: 'Reenie Beanie';
+  font-family: 'Reenie Beanie', cursive;;
   font-size: 60px;
   font-style: normal;
   font-variant: normal;
@@ -40,14 +40,16 @@ span#blogtitle a {
 
 #postdate {
   display: block;
-  font: normal normal 15px Molengo;
+  font: normal normal 15px;
+  font-family: Molengo, Helvetica, FreeSans, sans-serif;
   color: #cccccc;
 }
 
 #posttitle {
   display: block;
   margin: 0;
-  font: normal normal 20px Nobile;
+  font: normal normal 20px;
+  font-family: Nobile, Helvetica, FreeSans, sans-serif;
   color: #ffaa00;
 }
 
