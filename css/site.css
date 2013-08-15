@@ -8,6 +8,7 @@ a:visited {
 
 body {
   font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+  margin-top: 0px;
 }
 
 #bodywrapper {
@@ -16,6 +17,7 @@ body {
 
 #pageheader {
   padding-left: 10px;
+  display: block;
 }
 
 span#blogtitle a {
@@ -32,6 +34,8 @@ span#blogtitle a {
   background: #282828;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 10px;
+  display: inline;
 }
 
 #postheader {
@@ -40,7 +44,7 @@ span#blogtitle a {
 
 #postdate {
   display: block;
-  font: normal normal 15px;
+  font-size: 15px;
   font-family: Molengo, Helvetica, FreeSans, sans-serif;
   color: #cccccc;
 }
@@ -48,11 +52,15 @@ span#blogtitle a {
 #posttitle {
   display: block;
   margin: 0;
-  font: normal normal 20px;
+  font-size: 25px;
   font-family: Nobile, Helvetica, FreeSans, sans-serif;
   color: #ffaa00;
 }
 
 #postcontent {
   
+}
+
+#sidebar {
+  float: right;
 }
