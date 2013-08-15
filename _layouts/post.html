@@ -8,9 +8,11 @@
 			<span id="blogtitle">What's Up Duck</span>
 		</div>
 		<div id="post">
-			{{ page.date | date: "%A, %B %d, %Y" }}
-			<h2>{{ page.title }}</h2>
-			<div id="content">
+			<div id="postheader">
+				<span id="postdate">{{ page.date | date: "%A, %B %d, %Y" }}</span>
+				<span id="posttitle">{{ page.title }}</span>
+			</div>
+			<div id="postcontent">
 				{{ content }}
 			</div>
 			<div id="postfooter">
