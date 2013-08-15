@@ -1,3 +1,11 @@
+a:link {
+  color: #ff9900;
+}
+
+a:visited {
+  color: #dd7700;
+}
+
 #blogtitle {
   font-family: 'Reenie Beanie';
   font-size: 60px;
@@ -5,6 +13,11 @@
   font-variant: normal;
   text-decoration: none;
   color: #ffffff;
+}
+
+#post {
+  color: #ffffff;
+  background: #282828;
 }
 
 #postdate {
@@ -21,14 +34,5 @@
 }
 
 #postcontent {
-  color: #ffffff;
-  background: #282828;
-}
-
-a:link {
-  color: #ff9900;
-}
-
-a:visited {
-  color: #dd7700;
+  
 }
