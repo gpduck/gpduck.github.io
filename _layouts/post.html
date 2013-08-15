@@ -1,6 +1,14 @@
----
-layout: default
----
-{{ page.date | date %A, %B %d, %Y }}
-#{{ page.tile }}#
-{{ content }}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ page.title }}</title>
+		<link href="/css/syntax.css" rel="stylesheet" />
+	</head>
+	<body>
+		{% include header.html %}
+		{{ page.date | date %A, %B %d, %Y }}
+		#{{ page.tile }}#
+		{{ content }}
+		{% include footer.html %}
+	</body>
+</html>
