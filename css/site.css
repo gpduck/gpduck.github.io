@@ -11,7 +11,7 @@ body {
 }
 
 #bodywrapper {
-  background: transparent url(images/black50.png) repeat scroll top left;
+  background: transparent url(/images/black50.png) repeat scroll top left;
 }
 
 #pageheader {
