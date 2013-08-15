@@ -10,7 +10,7 @@ body {
   font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 }
 
-span #blogtitle {
+span#blogtitle a {
   font-family: 'Reenie Beanie';
   font-size: 60px;
   font-style: normal;
