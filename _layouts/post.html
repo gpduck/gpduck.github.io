@@ -5,9 +5,9 @@
 		<link href="/css/syntax.css" rel="stylesheet" />
 	</head>
 	<body>
-		{% include header.html %}
-		{{ page.date | date: "%A, %B %d, %Y" }}<br />
-		# {{ page.title }} #
+{% include header.html %}
+{{ page.date | date: "%A, %B %d, %Y" }}<br />
+# {{ page.title }} #
 		<div class="content">
 			{{ content }}
 		</div>
