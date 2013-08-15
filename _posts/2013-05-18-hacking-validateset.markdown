@@ -14,7 +14,6 @@ But that class wouldn't have come with the magic of ``ValidateSet``, and while I
 The result is the following function that takes a FunctionInfo object (use ``Get-Command``), the name of the parameter that is using ``ValidateSet``, and the new set of valid inputs.  It hacks its way into the command, locates the correct parameter, locates all the ``ValidateSet`` attributes on it, and rips into the heart of each one and replaces the private ``validValues`` array with the one provided in the ``-NewSet`` parameter.
 
 {% highlight powershell linenos %}
-
 <#
 	.SYNOPSIS
 		Replace the set of valid values on a function parameter that was defined using ValidateSet.
@@ -58,7 +57,6 @@ The result is the following function that takes a FunctionInfo object (use ``Get
 	.LINK
 		http://blog.whatsupduck.net/2013/05/hacking-validateset.html
 #>
-
 function Update-ValidateSet {
 	[CmdletBinding(SupportsShouldProcess=$true)]
 	param(
