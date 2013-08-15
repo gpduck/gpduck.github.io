@@ -1,3 +1,4 @@
+code { font-family: Consolas, Courier New, Courier, monospace; }
 .highlight  { background: #ffffff; }
 .highlight .lineno { color: #ffffff; background: #606060; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
