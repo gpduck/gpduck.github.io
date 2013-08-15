@@ -13,7 +13,10 @@
 				{{ content }}
 			</div>
 			<div id="postfooter">
-				by <a href="{{ page.author.link }}">{{ page.author.name }}</a>
+				by <a href="{{ page.author.link }}">{{ page.author.name }}</a><br />
+				{% unless page.tags == empty %}
+					Tags: {% for tag in page.tags %}{{ tag }}, {% endfor %}
+				{% endunless %}
 			</div>
 		</div>
 		<div id="sidebar">
