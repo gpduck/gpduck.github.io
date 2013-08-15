@@ -6,9 +6,11 @@
 	</head>
 	<body>
 		{% include header.html %}
-		{{ page.date | date: "%A, %B %d, %Y" }}
+		{{ page.date | date: "%A, %B %d, %Y" }}<br />
 		# {{ page.title }} #
-		{{ content }}
+		<div class="content">
+			{{ content }}
+		</div>
 		{% include footer.html %}
 	</body>
 </html>
