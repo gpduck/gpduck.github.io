@@ -16,7 +16,7 @@ span#blogtitle {
   font-style: normal;
   font-variant: normal;
   text-decoration: none !important;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 #post {
