@@ -6,6 +6,10 @@ a:visited {
   color: #dd7700;
 }
 
+body {
+  font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+}
+
 #blogtitle {
   font-family: 'Reenie Beanie';
   font-size: 60px;
