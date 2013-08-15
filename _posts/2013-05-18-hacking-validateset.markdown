@@ -17,5 +17,46 @@ The result is the following function that takes a FunctionInfo object (use ``Get
 
 <#
 	.SYNOPSIS
+
+		Replace the set of valid values on a function parameter that was defined using ValidateSet.
+
+	.DESCRIPTION
+		Replace the set of valid values on a function parameter that was defined using ValidateSet.
+
+	.PARAMETER Command
+		A FunctionInfo object for the command that has the parameter validation to be updated.  Get this using:
+
+		Get-Command -Name YourCommandName
+
+	.PARAMETER ParameterName
+		The name of the parameter that is using ValidateSet.
+
+	.PARAMETER  NewSet
+		The new set of valid values to use for parameter validation.
+
+	.EXAMPLE
+		Define a test function:
+
+		PS> Function Test-Function {
+			param(
+				[ValidateSet("one")]
+				$P
+			)
+		}
+
+		PS> Update-ValidateSet -Command (Get-Command Test-Function) -ParameterName "P" -NewSet @("one","two")
+
+		After running Update-ValidateSet, Test-Function will accept the values "one" and "two" as valid input for the -P parameter.
+
+	.OUTPUTS
+		Nothing
+
+	.NOTES
+		This function is updating a private member of ValidateSetAttribute and is thus not following the rules of .Net and could break at any time.  Use at your own risk!
+
+		Author : Chris Duck
+
+	.LINK
+		http://blog.whatsupduck.net/2013/05/hacking-validateset.html
 #>
 {% endhighlight %}
