@@ -4,27 +4,29 @@
 		{% include head.html %}
 	</head>
 	<body>
-		<div id="pageheader">
-			<span id="blogtitle"><a href="/">What's Up Duck</a></span>
-		</div>
-		<div id="post">
-			<div id="postheader">
-				<span id="postdate">{{ page.date | date: "%A, %B %d, %Y" }}</span>
-				<span id="posttitle">{{ page.title }}</span>
+		<div id="bodywrapper">
+			<div id="pageheader">
+				<span id="blogtitle"><a href="/">What's Up Duck</a></span>
 			</div>
-			<div id="postcontent">
-				{{ content }}
+			<div id="post">
+				<div id="postheader">
+					<span id="postdate">{{ page.date | date: "%A, %B %d, %Y" }}</span>
+					<span id="posttitle">{{ page.title }}</span>
+				</div>
+				<div id="postcontent">
+					{{ content }}
+				</div>
+				<div id="postfooter">
+					by <a href="{{ page.author.link }}">{{ page.author.name }}</a><br />
+					{% unless page.tags == empty %}
+						Tags: {% for tag in page.tags %}{{ tag }}, {% endfor %}
+					{% endunless %}
+				</div>
 			</div>
-			<div id="postfooter">
-				by <a href="{{ page.author.link }}">{{ page.author.name }}</a><br />
-				{% unless page.tags == empty %}
-					Tags: {% for tag in page.tags %}{{ tag }}, {% endfor %}
-				{% endunless %}
+			<div id="sidebar">
+				
 			</div>
+			{% include footer.html %}
 		</div>
-		<div id="sidebar">
-			
-		</div>
-		{% include footer.html %}
 	</body>
 </html>
