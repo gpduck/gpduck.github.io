@@ -3,9 +3,12 @@
 	<head>
 		<title>{{ page.title }}</title>
 		<link href="/css/syntax.css" rel="stylesheet" />
+		<link href="/css/site.css" rel="stylesheet" />
 	</head>
 	<body>
-		<h1>What's Up Duck</h1>
+		<div id="pageheader">
+			<span id="blogtitle">What's Up Duck</span>
+		</div>
 		<div id="post">
 			{{ page.date | date: "%A, %B %d, %Y" }}
 			<h2>{{ page.title }}</h2>
