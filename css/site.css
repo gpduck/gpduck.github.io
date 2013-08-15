@@ -22,18 +22,21 @@ a:visited {
   padding-right: 20px;
 }
 
+#postheader {
+  margin-left: -10px;
+}
+
 #postdate {
   display: block;
-  font: normal normal 18px Molengo;
+  font: normal normal 15px Molengo;
   color: #cccccc;
 }
 
 #posttitle {
   display: block;
   margin: 0;
-  font: normal normal 18px Nobile;
+  font: normal normal 20px Nobile;
   color: #ffaa00;
-  margin-left: -10px;
 }
 
 #postcontent {
