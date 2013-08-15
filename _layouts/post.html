@@ -5,11 +5,19 @@
 		<link href="/css/syntax.css" rel="stylesheet" />
 	</head>
 	<body>
-		{% include header.html %}
-		{{ page.date | date: "%A, %B %d, %Y" }}<br />
-		<h1>{{ page.title }}</h1>
-		<div class="content">
-			{{ content }}
+		<h1>What's Up Duck</h1>
+		<div id="post">
+			{{ page.date | date: "%A, %B %d, %Y" }}
+			<h2>{{ page.title }}</h2>
+			<div id="content">
+				{{ content }}
+			</div>
+			<div id="postfooter">
+				by <a href="{{ page.author.link }}">{{ page.author.name }}</a>
+			</div>
+		</div>
+		<div id="sidebar">
+			
 		</div>
 		{% include footer.html %}
 	</body>
