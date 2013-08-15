@@ -10,12 +10,12 @@ body {
   font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 }
 
-#blogtitle {
+span#blogtitle {
   font-family: 'Reenie Beanie';
   font-size: 60px;
   font-style: normal;
   font-variant: normal;
-  text-decoration: none;
+  text-decoration: none !important;
   color: #ffffff;
 }
 
