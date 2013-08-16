@@ -10,7 +10,7 @@ body {
   font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
   margin-top: 0px;
   margin-bottom: 0px;
-  background: ;#336699 url(/images/DSC_1416.jpg) no-repeat fixed top center;
+  background: #336699 url(/images/DSC_1416.jpg) no-repeat fixed top center;
 }
 
 #bodywrapper {
@@ -18,10 +18,13 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
+  padding-top: 25px;
+  padding-left: 20px;
 }
 
 #pageheader {
   padding-left: 10px;
+  padding-bottom: 25px;
   display: block;
 }
 
