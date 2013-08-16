@@ -88,6 +88,7 @@ span#blogtitle, span#blogtitle a {
 #sidebar {
   float: left;
   width: 200px;
+	padding-left: 15px;
 }
 
 .widget {
@@ -96,6 +97,13 @@ span#blogtitle, span#blogtitle a {
 
 .widgettitle {
 	font-size: 18px;
+	padding-bottom: 5px;
+	color: #cccccc;
+}
+
+#aboutme .profileimage {
+	float: left;
+	padding-right: 10px;
 }
 
 #aboutme .profilename {
