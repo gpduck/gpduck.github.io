@@ -90,6 +90,6 @@ span#blogtitle a {
 }
 
 #pagefootercontent {
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  color: #ffffff;
 }
