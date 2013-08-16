@@ -66,6 +66,12 @@ span#blogtitle a {
   
 }
 
+#postfooter {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.8em;
+}
+
 #sidebar {
   float: left;
   width: 200px;
