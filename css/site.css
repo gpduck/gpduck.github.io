@@ -25,7 +25,7 @@ body {
   background: transparent url(/images/black50.png) repeat scroll top left;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  /* moved to @media section width: 80%; */
   padding-top: 25px;
   padding-left: 20px;
 }
@@ -45,48 +45,15 @@ span#blogtitle, span#blogtitle a {
   color: #ffffff;
 }
 
-@media screen and (min-width:1250px) {
-	#post {
-		color: #ffffff;
-		background: #282828;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-top: 10px;
-		display: block;
-		margin-right: 265px;
-	}
-	
-	#sidebar {
-		float: right;
-		width: 250px;
-		padding-left: 15px;
-	}
-	
-	body {
-		background: #336699 url(/images/DSC_1416.jpg) no-repeat fixed top center;
-	}
+#post {
+	color: #ffffff;
+	background: #282828;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	display: block;
 }
 
-@media screen and (max-width: 1249px) {
-	#post {
-		color: #ffffff;
-		background: #282828;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-top: 10px;
-		display: block;
-		margin-right: 20px;
-	}
-	
-	#sidebar {
-		display: none;
-	}
-	
-	.highlight .lineno {
-		display: none;
-	}
-}
-	
 #postheader {
   margin-left: -10px;
 }
@@ -154,4 +121,42 @@ span#blogtitle, span#blogtitle a {
 
 .post-author {
   display: block;
+}
+
+@media screen and (min-width:1100px) {
+	#bodywrapper {
+		width: 80%;
+	}
+	
+	#post {
+		margin-right: 265px;
+	}
+	
+	#sidebar {
+		float: right;
+		width: 250px;
+		padding-left: 15px;
+	}
+	
+	body {
+		background: #336699 url(/images/DSC_1416.jpg) no-repeat fixed top center;
+	}
+}
+
+@media screen and (max-width: 1099px) {
+	#bodywrapper {
+		width: 95%;
+	}
+	
+	#post {
+		margin-right: 20px;
+	}
+	
+	#sidebar {
+		display: none;
+	}
+	
+	.highlight .lineno {
+		display: none;
+	}
 }
