@@ -1,9 +1,11 @@
 a:link {
   color: #ff9900;
+	text-decoration: none;
 }
 
 a:visited {
   color: #dd7700;
+	text-decoration: none;
 }
 
 html {
@@ -86,6 +88,23 @@ span#blogtitle, span#blogtitle a {
 #sidebar {
   float: left;
   width: 200px;
+}
+
+.widget {
+	color: #ffffff;
+}
+
+.widgettitle {
+	font-size: 18px;
+}
+
+#aboutme .profilename {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#aboutme .profilelink {
+	font-size: 14px;
 }
 
 #pagefooter {
