@@ -28,7 +28,7 @@ body {
   display: block;
 }
 
-span#blogtitle a {
+span#blogtitle, span#blogtitle a {
   font-family: 'Reenie Beanie', cursive;;
   font-size: 60px;
   font-style: normal;
