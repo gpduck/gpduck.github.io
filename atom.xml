@@ -6,7 +6,7 @@ layout: nil
  
   <title>{{ site.name }}</title>
   <link href="http://example.com/"/>
-  <link type="application/atom+xml" rel="self" href="http://example.com/atom.xml"/>
+  <link type="application/atom+xml" rel="self" href="{{ site.baseurl}}/atom.xml"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.baseurl }}</id>
   <author>
