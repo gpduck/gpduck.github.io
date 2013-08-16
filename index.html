@@ -2,8 +2,15 @@
 layout: default
 title: "WhatsUpDuck"
 ---
-{% for post in site.posts offset: 0 limit: 5 %}
-<a href="{{ post.url }}" >{{ post.title }}</a><br />
-{{ post.date | date: "%B %e, %Y" }}
-<hr />
-{% endfor %}
+<div id="postindex">
+	{% for post in site.posts offset: 0 limit: 5 %}
+		<div class="postsummary">
+			<a href="{{ post.url }}" >{{ post.title }}</a><br />
+			{{ post.date | date: "%B %e, %Y" }}<br />
+			{% unless post.tags == empty %}
+				<span class="posttags">Tags: {% for tag in page.tags %}{{ tag }}, {% endfor %}</span>
+			{% endunless %}
+		</div>
+		<hr />
+	{% endfor %}
+</div>
