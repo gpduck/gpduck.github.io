@@ -93,3 +93,7 @@ span#blogtitle a {
   text-align: center;
   color: #ffffff;
 }
+
+.post-author {
+  display: block;
+}
