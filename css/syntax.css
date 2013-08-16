@@ -3,6 +3,7 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
 .highlight  {
   background: #ffffff;
   overflow: auto;
+  margin: 0;
 }
 
 .highlight .lineno {
