@@ -81,6 +81,10 @@ span#blogtitle, span#blogtitle a {
 	#sidebar {
 		display: none;
 	}
+	
+	.highlight .lineno {
+		display: none;
+	}
 }
 	
 #postheader {
