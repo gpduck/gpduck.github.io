@@ -2,6 +2,7 @@
 <html>
 	<head>
 		{% include head.html %}
+		<meta property="og:description" content="{{ page.excerpt }}" />
 	</head>
 	<body>
 		<div id="bodywrapper">
@@ -11,10 +12,10 @@
 			<div id="sidebar">
 				{% include sidebar.html %}
 			</div>
-			<div id="post">
+			<div id="post" itemscope itemtype="http://schema.org/Blog">
 				<div id="postheader">
 					<span id="postdate">{{ page.date | date: "%A, %B %d, %Y" }}</span>
-					<span id="posttitle">{{ page.title }}</span>
+					<span id="posttitle" itemprop="name">{{ page.title }}</span>
 				</div>
 				<div id="postcontent">
 					{{ content }}
