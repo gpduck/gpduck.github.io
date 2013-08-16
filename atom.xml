@@ -23,7 +23,7 @@ layout: nil
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
       <name>{{ post.author.name }}</name>
-      <uri>{{ post.author.url }}</uri>
+      <uri>{{ post.author.link }}</uri>
     </author>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
