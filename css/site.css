@@ -6,10 +6,15 @@ a:visited {
   color: #dd7700;
 }
 
+html {
+	position: relative;
+	min-height: 100%;
+}
+
 body {
   font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 52px; /* bottom = footer height */
   background: #336699 url(/images/DSC_1416.jpg) no-repeat fixed top center;
 }
 
@@ -83,6 +88,10 @@ span#blogtitle, span#blogtitle a {
 }
 
 #pagefooter {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 52px;
   clear: both;
   padding-top: 10px;
   padding-left: 20px;
