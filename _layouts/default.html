@@ -8,9 +8,11 @@
 			<div id="pageheader">
 				<span id="blogtitle">What's Up Duck</span>
 			</div>
-			{{ content }}
 			<div id="sidebar">
-				Sidebar Content
+				{% include sidebar.html %}
+			</div>
+			<div id="post">
+			{{ content }}
 			</div>
 			<div id="pagefooter">
 				<div id="pagefootercontent">
