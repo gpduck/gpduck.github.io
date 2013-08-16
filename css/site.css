@@ -45,17 +45,37 @@ span#blogtitle, span#blogtitle a {
   color: #ffffff;
 }
 
-#post {
-  color: #ffffff;
-  background: #282828;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  display: block;
-  width: 70%;
-  float: left;
+@media screen and (min-width:1250px) {
+	#post {
+		color: #ffffff;
+		background: #282828;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 10px;
+		display: block;
+		margin-right: 265px;
+	}
+	#sidebar {
+		float: right;
+		width: 250px;
+		padding-left: 15px;
+	}
 }
 
+@media screen and (max-width: 1249px) {
+	#post {
+		color: #ffffff;
+		background: #282828;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 10px;
+		display: block;
+	}
+	#sidebar {
+		display: none;
+	}
+}
+	
 #postheader {
   margin-left: -10px;
 }
@@ -83,12 +103,6 @@ span#blogtitle, span#blogtitle a {
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 0.8em;
-}
-
-#sidebar {
-  float: left;
-  width: 250px;
-	padding-left: 15px;
 }
 
 .widget {
