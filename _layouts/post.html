@@ -8,6 +8,9 @@
 			<div id="pageheader">
 				<span id="blogtitle"><a href="/">What's Up Duck</a></span>
 			</div>
+			<div id="sidebar">
+				{% include sidebar.html %}
+			</div>
 			<div id="post">
 				<div id="postheader">
 					<span id="postdate">{{ page.date | date: "%A, %B %d, %Y" }}</span>
@@ -44,9 +47,6 @@
 						<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     
 				</div>
-			</div>
-			<div id="sidebar">
-				{% include sidebar.html %}
 			</div>
 			<div id="pagefooter">
 				<div id="pagefootercontent">
