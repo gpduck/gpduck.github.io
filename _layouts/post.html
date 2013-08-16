@@ -12,16 +12,17 @@
 			<div id="sidebar">
 				{% include sidebar.html %}
 			</div>
-			<div id="post" itemscope itemtype="http://schema.org/Blog">
+			<div id="post" itemscope itemtype="http://schema.org/BlogPosting">
+				<meta itemprop="description" content="{{ page.excerpt }}" />
 				<div id="postheader">
 					<span id="postdate">{{ page.date | date: "%A, %B %d, %Y" }}</span>
 					<span id="posttitle" itemprop="name">{{ page.title }}</span>
 				</div>
-				<div id="postcontent">
+				<div id="postcontent" itemprop="articleBody">
 					{{ content }}
 				</div>
 				<div id="postfooter">
-					<span class="post-author vcard" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+					<span class="post-author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
 						by <span class="fn">
 							<a href="{{ page.author.link }}" itemprop="url" rel="author" title="author profile">
 								<span itemprop="name">{{ page.author.name }}</span>
