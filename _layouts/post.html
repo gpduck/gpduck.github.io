@@ -25,7 +25,7 @@
 						</span>
 					</span>
 					{% unless page.tags == empty %}
-						Tags: {% for tag in page.tags %}{{ tag }}, {% endfor %}
+						<span class="posttags">Tags: {% for tag in page.tags %}{{ tag }}, {% endfor %}</span>
 					{% endunless %}
 				</div>
 			</div>
