@@ -52,14 +52,14 @@ span#blogtitle, span#blogtitle a {
   margin-left: -10px;
 }
 
-#postdate {
+.postdate, #postdate {
   display: block;
   font-size: 15px;
   font-family: Molengo, Helvetica, FreeSans, sans-serif;
   color: #cccccc;
 }
 
-#posttitle {
+.posttitle, #posttitle {
   display: block;
   margin: 0;
   font-size: 25px;
