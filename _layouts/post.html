@@ -17,7 +17,13 @@
 					{{ content }}
 				</div>
 				<div id="postfooter">
-					by <a href="{{ page.author.link }}">{{ page.author.name }}</a><br />
+					<span class="post-author vcard" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+						by <span class="fn">
+							<a href="{{ page.author.link }}" itemprop="url" rel="author" title="author profile">
+								<span itemprop="name">{{ page.author.name }}</span>
+							</a>
+						</span>
+					</span>
 					{% unless page.tags == empty %}
 						Tags: {% for tag in page.tags %}{{ tag }}, {% endfor %}
 					{% endunless %}
