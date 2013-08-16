@@ -16,7 +16,7 @@ html {
 body {
   font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
   margin-top: 0px;
-  background: #336699 url(/images/DSC_1416.jpg) no-repeat fixed top center;
+  background: #336699 url(/images/DSC_1416_lo.jpg) no-repeat fixed top center;
 	min-height: 100%;
 	height: 100%;
 }
@@ -55,10 +55,15 @@ span#blogtitle, span#blogtitle a {
 		display: block;
 		margin-right: 265px;
 	}
+	
 	#sidebar {
 		float: right;
 		width: 250px;
 		padding-left: 15px;
+	}
+	
+	body {
+		background: #336699 url(/images/DSC_1416.jpg) no-repeat fixed top center;
 	}
 }
 
