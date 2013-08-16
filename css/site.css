@@ -91,7 +91,8 @@ span#blogtitle a {
 
 #pagefootercontent {
   text-align: center;
-  color: #ffffff;
+  color: #cccccc;
+  font-size: 14px;
 }
 
 .post-author {
