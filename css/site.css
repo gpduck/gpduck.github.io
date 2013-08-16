@@ -139,6 +139,10 @@ span#blogtitle, span#blogtitle a {
 		padding-right: 10px;
 	}
 	
+	#sidebar hr {
+		clear: both;
+	}
+	
 	body {
 		background: #336699 url(/images/DSC_1416.jpg) no-repeat fixed top center;
 	}
