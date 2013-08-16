@@ -13,6 +13,9 @@ body {
 
 #bodywrapper {
   background: transparent url(/images/black50.png) repeat scroll top left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 #pageheader {
@@ -35,7 +38,9 @@ span#blogtitle a {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
-  display: inline;
+  display: block;
+  width: auto;
+  float: left;
 }
 
 #postheader {
@@ -62,5 +67,10 @@ span#blogtitle a {
 }
 
 #sidebar {
-  float: right;
+  float: left;
+  width: 200px;
+}
+
+#pagefooter {
+  clear: both;
 }
