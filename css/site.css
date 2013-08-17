@@ -15,7 +15,7 @@ html {
 
 body {
   font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
-  margin-top: 0px;
+  margin: 0px;
   background: #336699 url(/images/DSC_1416_lo.jpg) no-repeat fixed top center;
 	min-height: 100%;
 	height: 100%;
@@ -28,6 +28,7 @@ body {
   /* moved to @media section width: 80%; */
   padding-top: 25px;
   padding-left: 20px;
+	padding-right: 20px;
 }
 
 #pageheader {
@@ -89,7 +90,7 @@ span#blogtitle, span#blogtitle a {
 
 .postnav {
 	font-size: 20px;
-	padding-bottom: 5px
+	padding-bottom: 5px;
 	height: 22px;
 }
 
@@ -177,11 +178,7 @@ span#blogtitle, span#blogtitle a {
 
 @media screen and (max-width: 1099px) {
 	#bodywrapper {
-		width: 95%;
-	}
-	
-	#post {
-		margin-right: 20px;
+		width: 94%;
 	}
 	
 	#sidebar {
@@ -206,7 +203,6 @@ span#blogtitle, span#blogtitle a {
 	}
 	
 	#post {
-		margin-right: 0px;
 		padding-left: 8px;
 		padding-right: 8px;
 	}
