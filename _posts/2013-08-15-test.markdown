@@ -1,5 +1,7 @@
 ---
+layout: post
 title: Test Page
-layout: default
+tags: [testing]
+author: { link: "https://plus.google.com/111921112014612222144/about", name: Chris Duck }
 ---
 This is a test page.
