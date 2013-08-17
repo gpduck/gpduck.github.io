@@ -60,6 +60,22 @@
 					<!-- End Facebook Share -->
 					</div>
 					
+					<div class="postnav">
+						<div class="postnav-previous>
+							{% if page.previous.url %}
+								<a href="{{ page.previous.url }}" title="Previous Post">Previous</a>
+							{% endif %}
+						</div>
+						<div class="postnav-home">
+							<a href="{{ site.baseurl }}" title="Home">Home</a>
+						</div>
+						<div class="postnav-next">
+							{% if page.next.url %}
+								<a href="{{ page.next.url }}" title="Next Post">Next</a>
+							{% endif %}
+						</div>
+					</div>
+					
 					<div id="disqus_thread"></div>
 						<script type="text/javascript">
 							/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -74,21 +90,6 @@
 						</script>
 						<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 						<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-						<div id="postnav">
-							<span>
-								{% if page.previous.url %}
-									<a href="{{ page.previous.url }}" title="Previous Post">Previous</a>
-								{% endif %}
-							</span>
-							<span>
-								<a href="{{ site.baseurl }}" title="Home">Home</a>
-							</span>
-							<span>
-								{% if page.next.url %}
-									<a href="{{ page.next.url }}" title="Next Post">Next</a>
-								{% endif %}
-							</span>
-						</div>
 				</div>
 			</div>
 			<div id="pagefooter">

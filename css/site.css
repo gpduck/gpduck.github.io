@@ -83,6 +83,27 @@ span#blogtitle, span#blogtitle a {
   font-size: 0.8em;
 }
 
+.postnav {
+	font-size: 18px;
+}
+
+.postnav > div {
+	width: 33%;
+	float: left;
+}
+
+.postnav-previous {
+	text-align: left;
+}
+
+.postnav-home {
+	text-align: center;
+}
+
+.postnav-next {
+	text-align: right;
+}
+
 .widget {
 	color: #ffffff;
 }
