@@ -2,7 +2,7 @@
 	{% assign tagname = tag | first %}
 	{% if tagname == include.param %}
 		{% for taggedpost in tag offset:1 %}
-			{{ taggedpost }}<br />
+			{{ site.baseurl}}{{ taggedpost.url }}{{ taggedpost.title }}<br />
 		{% endfor %}
 	{% endif %}
 {% endfor %}
