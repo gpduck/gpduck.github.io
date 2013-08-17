@@ -188,6 +188,10 @@ span#blogtitle, span#blogtitle a {
 }
 
 @media screen and (max-width: 500px) {
+	body {
+		background: #336699
+	}
+	
 	#bodywrapper {
 		width: 100%;
 		padding-left: 0px;
