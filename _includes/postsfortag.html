@@ -1,1 +1,10 @@
+{% for tag in site.tags %}
+	{% assign tagname = tag | first %}
+	{% if tagname == include.param %}
+		{% for post in tag offset:1 %}
+			{{ post.url }}<br />
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+
 {{ include.param }}
