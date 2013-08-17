@@ -11,6 +11,6 @@ title: "Whats Up Duck"
 				<span class="posttags">Tags: {% for tag in post.tags %}{{ tag }}, {% endfor %}</span>
 			{% endunless %}
 		</div>
-		<hr />
+		{% unless forloop.last %}<hr />{% endunless %}
 	{% endfor %}
 </div>
