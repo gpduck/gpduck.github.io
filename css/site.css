@@ -83,8 +83,14 @@ span#blogtitle, span#blogtitle a {
   font-size: 0.8em;
 }
 
+#sharinglinks {
+	padding-top: 5px;
+}
+
 .postnav {
-	font-size: 18px;
+	font-size: 20px;
+	padding-bottom: 5px
+	height: 22px;
 }
 
 .postnav > div {
@@ -203,5 +209,9 @@ span#blogtitle, span#blogtitle a {
 		margin-right: 0px;
 		padding-left: 8px;
 		padding-right: 8px;
+	}
+	
+	#postheader {
+		margin-left: 0px;
 	}
 }

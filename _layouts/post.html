@@ -29,7 +29,7 @@
 						</span>
 					</span>
 					{% unless page.tags == empty %}
-						<span class="posttags">Tags: {% for tag in page.tags %}{{ tag }}, {% endfor %}</span>
+						<span class="posttags">Tags: {% for tag in page.tags %}{{ tag }}{% unless forloop.last%},{% endunless %} {% endfor %}</span>
 					{% endunless %}
 					
 					<div id="sharinglinks">
@@ -59,9 +59,24 @@
 					}(document, 'script', 'facebook-jssdk'));</script>
 					<!-- End Facebook Share -->
 					</div>
-					
+					<hr />
+					<div id="disqus_thread"></div>
+						<script type="text/javascript">
+							/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+							var disqus_shortname = 'gpduckblog'; // required: replace example with your forum shortname
+
+							/* * * DON'T EDIT BELOW THIS LINE * * */
+							(function() {
+							var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+							dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+							(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+							})();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+					<hr />
 					<div class="postnav">
-						<div class="postnav-previous>
+						<div class="postnav-previous">
 							{% if page.previous.url %}
 								<a href="{{ page.previous.url }}" title="Previous Post">Previous</a>
 							{% else %}
@@ -79,21 +94,6 @@
 							{% endif %}
 						</div>
 					</div>
-					
-					<div id="disqus_thread"></div>
-						<script type="text/javascript">
-							/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-							var disqus_shortname = 'gpduckblog'; // required: replace example with your forum shortname
-
-							/* * * DON'T EDIT BELOW THIS LINE * * */
-							(function() {
-							var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-							dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-							(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-							})();
-						</script>
-						<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-						<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 				</div>
 			</div>
 			<div id="pagefooter">
