@@ -189,7 +189,9 @@ span#blogtitle, span#blogtitle a {
 
 @media screen and (max-width: 500px) {
 	body {
-		background: #336699
+		background: #336699;
+		margin-left: 0px;
+		margin-right: 0px;
 	}
 	
 	#bodywrapper {
@@ -199,7 +201,7 @@ span#blogtitle, span#blogtitle a {
 	
 	#post {
 		margin-right: 0px;
-		padding-left: 5px;
-		padding-right: 5px;
+		padding-left: 8px;
+		padding-right: 8px;
 	}
 }

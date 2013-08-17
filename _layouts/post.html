@@ -64,6 +64,8 @@
 						<div class="postnav-previous>
 							{% if page.previous.url %}
 								<a href="{{ page.previous.url }}" title="Previous Post">Previous</a>
+							{% else %}
+								&nbsp;
 							{% endif %}
 						</div>
 						<div class="postnav-home">
@@ -72,6 +74,8 @@
 						<div class="postnav-next">
 							{% if page.next.url %}
 								<a href="{{ page.next.url }}" title="Next Post">Next</a>
+							{% else %}
+								&nbsp;
 							{% endif %}
 						</div>
 					</div>
