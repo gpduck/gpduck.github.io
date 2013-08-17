@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include head.html %}
+	</head>
+	<body>
+		<div id="bodywrapper">
+			<div id="pageheader">
+				<span id="blogtitle"><a href="/">What's Up Duck</a></span>
+			</div>
+			<div id="sidebar">
+				{% include sidebar.html %}
+			</div>
+			<div id="post">
+				{{ content }}
+			</div>
+			<div id="pagefooter">
+				<div id="pagefootercontent">
+					{% include footer.html %}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
