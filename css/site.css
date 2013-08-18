@@ -82,9 +82,10 @@ span#blogtitle, span#blogtitle a {
 .posttitle, #posttitle {
   display: block;
   margin: 0;
-  font-size: 25px;
+  font-size: 22px;
   font-family: Nobile, Helvetica, FreeSans, sans-serif;
   color: #ffaa00;
+	font-weight: bold;
 }
 
 #postcontent {
