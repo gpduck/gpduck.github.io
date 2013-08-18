@@ -63,8 +63,7 @@ In there you can see the algorithm (which I am assuming is being used in this ca
   3. If it is a list and has ``1`` element, return the ``IsTrue(list[0])`` value (ie recurse on the one element and return its value
   4. If it is a list with more than ``1`` thing in it, return ``$true``
 
-
-As you can see, the [Array][] and [ArrayList][] fall into rules 6.2-6.4 because they implement [IList][], whereas the [SearchResultCollection][collection] falls into rule 6.i because it does not implement [IList][] so the conversion to a list fails, which means it was a plain old non-null object which evaluates to ``$true`` in Powershell.
+As you can see, the [Array][] and [ArrayList][] fall into rules 6.2-6.4 because they implement [IList][], whereas the [SearchResultCollection][collection] falls into rule 6.1 because it does not implement [IList][] so the conversion to a list fails, which means it was a plain old non-null object which evaluates to ``$true`` in Powershell.
 
 [collection]: http://msdn.microsoft.com/en-us/library/system.directoryservices.searchresultcollection.aspx
 [question]: http://social.technet.microsoft.com/Forums/en-US/winserverpowershell/thread/44128f6f-3263-4263-a9cb-f855d84ee5b7#4bed26db-b865-45ec-afce-2c0c40c661b4
