@@ -16,6 +16,17 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
   padding-right: 5px;
 }
 
+.psconsole {
+	background-color: #12456;
+	padding: 10px;
+	font-family: Consolas, Courier New, Courier, monospace;
+}
+
+.psconsole-error {
+	color: red;
+	background: black;
+}
+
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { color: #00008b; font-weight: bold } /* Keyword */
