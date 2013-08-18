@@ -66,7 +66,7 @@ else
 //... (continues on to handle special cases for enumerable objects)
 {% endhighlight %}
 
-You can see they are using the [C# as operator][as] to attempt to convert the parameter into a ``string`` object.  The problem is that Powershell uses an [adaptive type system][adaptive] to work magic on some particularly annoying types (XML and WMI come to mind), and apparently the method that is reading the input when you forget to specify a mandatory parameter (and also the Read-Host cmdlet as demonstrated in [677599][]) are returning Powershell objects that ___look___ like strings, but aren't actual .Net strings.
+You can see they are using the [C# as operator][as] to attempt to convert the parameter into a ``string`` object.  The problem is that Powershell uses an [adaptive type system][adaptive] to work magic on some particularly annoying types (XML and WMI come to mind), and apparently the method that is reading the input when you forget to specify a mandatory parameter (and also the Read-Host cmdlet as demonstrated in [677559][]) are returning Powershell objects that ___look___ like strings, but aren't actual .Net strings.
 
 ###Go Vote###
 
