@@ -55,6 +55,7 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
 .highlight .nt { color: #000080 } /* Name.Tag */
 .highlight .nv { color: #ff4500 } /* Name.Variable */
 .highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .p { color: #000000 } /* assignment/accessor */
 .highlight .w { color: #bbbbbb } /* Text.Whitespace */
 .highlight .mf { color: #009999 } /* Literal.Number.Float */
 .highlight .mh { color: #009999 } /* Literal.Number.Hex */
