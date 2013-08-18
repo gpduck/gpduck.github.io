@@ -13,6 +13,7 @@
 						{% unless post.tags == empty %}
 							<span class="posttags">Tags: {% for posttag in taggedpost.tags %}<a href="{{ site.baseurl }}/tag/{{ posttag }}.html">{{ posttag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
 						{% endunless %}
+						<div class="postexcerpt">{{ taggedpost.excerpt}}</div>
 					</div>
 					{% unless forloop.last %}<hr />{% endunless %}
 				{% endfor %}
