@@ -88,7 +88,13 @@ span#blogtitle, span#blogtitle a {
 }
 
 #postcontent {
-  
+  font-size: 15px;
+}
+
+#postcontent h3 {
+	font-weight: bold;
+	margin-left: -10px;
+	color: #ffcc7f;
 }
 
 #postfooter {
@@ -219,6 +225,10 @@ span#blogtitle, span#blogtitle a {
 	}
 	
 	#postheader {
+		margin-left: 0px;
+	}
+	
+	#postcontent h3 {
 		margin-left: 0px;
 	}
 }
