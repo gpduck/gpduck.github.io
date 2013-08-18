@@ -3,6 +3,7 @@ layout: post
 title: A PowerShell Alternative to SDelete
 tags: [powershell,sdelete,sysinternals]
 author: { link: "https://plus.google.com/111921112014612222144/about", name: Chris Duck }
+excerpt: "Many storage appliances support thin provisioning by not storing large blocks of zeros on disk, thus saving expensive physical disks for actual data.  One of the challenges of this feature is that Windows (or most file systems really) does not zero out space that was used by files that have been deleted.  This means that over time as files are written an deleted, the amount of physical disk that is saved by thin provisioning grows smaller."
 ---
 ###Problem Background###
 
