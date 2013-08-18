@@ -14,7 +14,7 @@ So I did a little digging and came up with the following...
 
 The reason a [SearchResultCollection][collection] evaluates to true even when it is empty is because it does not implement the [IList][] interface:
 
-<div class="poshconsole">PS&gt; [System.DirectoryServices.SearchResultCollection].GetInterfaces()<br />
+<div class="psconsole">PS&gt; [System.DirectoryServices.SearchResultCollection].GetInterfaces()<br />
 <br />
 IsPublic IsSerial Name<br />
 -------- -------- ----<br />
