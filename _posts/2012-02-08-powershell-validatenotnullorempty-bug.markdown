@@ -27,20 +27,20 @@ Function test
 
 The expected result when you pass an empty string would be an error stating that the parameter failed vaildation, no matter how you generated that string:
 
-<div class="psconsole"><span class="code">PS> test ""</span><br />
-<span style="color: red; background: black;">test : Cannot validate argument on parameter 'param'. The argument is null or empty. Supply an argument that is not null or empty and then try the command again.</span></div>
+<div class="psconsole">PS> test ""<br />
+<span class="psconsole-error">test : Cannot validate argument on parameter 'param'. The argument is null or empty. Supply an argument that is not null or empty and then try the command again.</span></div>
 
 However, when you call the function without any parameters, Powershell sees that you forgot a mandatory parameter and prompts you for a value.  If you just press &lt;enter&gt;, the empty string incorrectly passes validation and your function is executed:
 
-<pre><span class="code">PS> test
-
-cmdlet test at command pipeline position 1
-Supply values for the following parameters:
-param:&lt;just press enter here&gt;
-
-System.String
-Entered: ''
-True</span></pre>
+<div class="psconsole">PS> test<br />
+<br />
+cmdlet test at command pipeline position 1<br />
+Supply values for the following parameters:<br />
+param:&lt;just press enter here&gt;<br />
+<br />
+System.String<br />
+Entered: ''<br />
+True</div>
 
 As you can see, the parameter is a string and it is an empty string, which should never have passed validation.
 
@@ -128,10 +128,10 @@ namespace ConsoleApplication1
 
 The output is as follows:
 
-<pre><span class="code">oStr type = System.String
-oPso type = System.Management.Automation.PSObject
-sStr.IsNullOrEmpty = True
-oPso is not a string</span></pre>
+<div class="psconsole">oStr type = System.String<br />
+oPso type = System.Management.Automation.PSObject<br />
+sStr.IsNullOrEmpty = True<br />
+oPso is not a string</div>
 
 As you can see, the string->string conversion was successful (oStr->sStr variables), while the PSObject->string conversion was not (oPso->sPso).  This results in the PSObject argument being treated as a regular object (which is not null) instead of a string, even though it is type-adapting a string object.
 

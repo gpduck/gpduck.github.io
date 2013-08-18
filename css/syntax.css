@@ -27,6 +27,11 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
 	background: black;
 }
 
+.psconsole-warning {
+	color: yellow;
+	background: black;
+}
+
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { color: #00008b; font-weight: bold } /* Keyword */
