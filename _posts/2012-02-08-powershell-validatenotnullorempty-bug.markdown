@@ -4,7 +4,7 @@ title: "Powershell ValidateNotNullOrEmpty Bug"
 tags: [powershell]
 author: { link: "https://plus.google.com/111921112014612222144/about", name: Chris Duck }
 ---
-I was showing a co-worker how easy it is to ensure that the parameters to his script were actually being set using the ``[Parameter(Mandatory=$true)]`` and ````[ValidateNotNullOrEmpty()]`` decorators on his parameter declaration block, and we encountered a bug where he was able to pass an empty string as a parameter to his function and the validation did not catch it.
+I was showing a co-worker how easy it is to ensure that the parameters to his script were actually being set using the ``[Parameter(Mandatory=$true)]`` and ``[ValidateNotNullOrEmpty()]`` decorators on his parameter declaration block, and we encountered a bug where he was able to pass an empty string as a parameter to his function and the validation did not catch it.
 
 ###Reproduction Steps###
 
