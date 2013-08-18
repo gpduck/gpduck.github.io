@@ -31,7 +31,7 @@ The expected result when you pass an empty string would be an error stating that
 <span class="code">PS> test ""</span>
 <span class="code" style="color: red; background: black;">test : Cannot validate argument on parameter 'param'. The argument is null or empty. Supply an argument that is not null or empty and then try the command again.</span></pre>
 
-However, when you call the function without any parameters, Powershell sees that you forgot a mandatory parameter and prompts you for a value.  If you just press <enter>, the empty string incorrectly passes validation and your function is executed:
+However, when you call the function without any parameters, Powershell sees that you forgot a mandatory parameter and prompts you for a value.  If you just press &lt;enter&gt;, the empty string incorrectly passes validation and your function is executed:
 
 <pre><span class="code">PS> test
 
