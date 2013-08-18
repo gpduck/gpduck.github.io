@@ -13,29 +13,29 @@ title: "Whats Up Duck"
 			{% endunless %}
 		</div>
 		<hr />
-		
-		<div class="postnav">
-			<div class="postnav-previous">
-				{% if paginator.previous_page %}
-					{% if paginator.previous_page == 1 %}
-						<a href="{{ site.baseurl }}/" title="Previous Page">Previous</a>
-					{% else %}
-						<a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" title="Previous Page">Previous</a>
-					{% endif %}
-				{% else %}
-					&nbsp;
-				{% endif %}
-			</div>
-			<div class="postnav-home">
-				<a href="{{ site.baseurl }}/" title="Home">Home</a>
-			</div>
-			<div class="postnav-next">
-				{% if paginator.next_page %}
-					<a href="{{ site.baseurl }}{{ paginator.next_page_path }}" title="Next Page">Next</a>
-				{% else %}
-					&nbsp;
-				{% endif %}
-			</div>
-		</div>
 	{% endfor %}
+	<div class="postnav">
+		<div class="postnav-previous">
+			{% if paginator.next_page %}
+				<a href="{{ site.baseurl }}{{ paginator.next_page_path }}" title="Older Posts">Older</a>
+			{% else %}
+				&nbsp;
+			{% endif %}
+		</div>
+		<div class="postnav-home">
+			<a href="{{ site.baseurl }}/" title="Home">Home</a>
+		</div>
+		<div class="postnav-next">
+			{% if paginator.previous_page %}
+				{% if paginator.previous_page == 1 %}
+					<a href="{{ site.baseurl }}/" title="Newer Posts">Newer</a>
+				{% else %}
+					<a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" title="Newer Posts">Newer</a>
+				{% endif %}
+			{% else %}
+				&nbsp;
+			{% endif %}
+		</div>
+
+	</div>
 </div>
