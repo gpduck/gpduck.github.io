@@ -56,6 +56,19 @@ span#blogtitle, span#blogtitle a {
 	display: block;
 }
 
+.postsummary {
+	padding-top: 10px;
+}
+
+.postexcerpt {
+	padding-top: 10px;
+	padding-left: 30px;
+}
+
+.posttags {
+	font-size: 12px;
+}
+
 #postheader {
   margin-left: -10px;
 }
