@@ -27,8 +27,8 @@ Function test
 
 The expected result when you pass an empty string would be an error stating that the parameter failed vaildation, no matter how you generated that string:
 
-<span class="code">PS> test ""</span>
-<span style="color: red; background: black;">test : Cannot validate argument on parameter 'param'. The argument is null or empty. Supply an argument that is not null or empty and then try the command again.</span>
+<div class="psconsole"><span class="code">PS> test ""</span><br />
+<span style="color: red; background: black;">test : Cannot validate argument on parameter 'param'. The argument is null or empty. Supply an argument that is not null or empty and then try the command again.</span></div>
 
 However, when you call the function without any parameters, Powershell sees that you forgot a mandatory parameter and prompts you for a value.  If you just press &lt;enter&gt;, the empty string incorrectly passes validation and your function is executed:
 
