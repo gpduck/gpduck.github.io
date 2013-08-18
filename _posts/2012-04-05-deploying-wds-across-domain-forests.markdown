@@ -20,7 +20,7 @@ Using Windows 7 or Server 2008 R2, first create a mount folder to mount the wim 
 
 ###Configure the PE Image###
 
-Window PE includes a file called [winpeshl.ini](http://technet.microsoft.com/en-us/library/dd744560(WS.10).aspx) ([Win 8/2012 version](http://technet.microsoft.com/en-us/library/hh825046.aspx)) that you can use to specify custom applications to run instead of starting setup.exe automatically.  We will use this file to start [setup.exe with custom options](http://technet.microsoft.com/en-us/library/dd799264(WS.10).aspx) that will tell it to connect to WDSSecondary instead of defaulting to the WDS server that it booted from (WDSPrimary).
+Window PE includes a file called [winpeshl.ini][winpeshl] ([Win 8/2012 version][winpeshl2008]) that you can use to specify custom applications to run instead of starting setup.exe automatically.  We will use this file to start [setup.exe with custom options][setupexe] that will tell it to connect to WDSSecondary instead of defaulting to the WDS server that it booted from (WDSPrimary).
 
 Open notepad and create a new file with the following contents
 
@@ -39,3 +39,7 @@ Now we need to unmount the wim file and commit our changes.  This is accomplishe
 ``dism /unmount-wim /mountdir:c:\PEBoot\mount /commit``
 
 Now all that is left is to import the new boot image into the primary WDS server that all clients boot to.  In this case, you would go to WDSPrimary and right click "Boot Images" and select "Add Boot Image".  Now when you PXE boot, you will have an option to boot to the customized image that connects to WDSSecondary to deploy the operating system.
+
+[winpeshl]: http://technet.microsoft.com/en-us/library/dd744560(WS.10).aspx
+[winpeshl2008]: http://technet.microsoft.com/en-us/library/hh825046.aspx
+[setupexe]: http://technet.microsoft.com/en-us/library/dd799264(WS.10).aspx
