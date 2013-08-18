@@ -12,7 +12,7 @@ I was aware that Powershell has some special rules for casting objects, but a se
 
 So I did a little digging and came up with the following...
 
-The reason a [SearchResultCollection][collection] evaluates to true even when it is empty is because it does not implement the [IList][] interface:</p>
+The reason a [SearchResultCollection][collection] evaluates to true even when it is empty is because it does not implement the [IList][] interface:
 
 <div class="poshconsole">PS&gt; [System.DirectoryServices.SearchResultCollection].GetInterfaces()<br />
 <br />
@@ -58,10 +58,10 @@ In there you can see the algorithm (which I am assuming is being used in this ca
 4. If it is a number, return ``$false`` if it is ``0``, else return ``$true``.
 5. If it is a SwitchParameter, call its own ``ToBool()`` method.
 6. Convert it to an IList:
-  1. If this conversion fails, return ``$true`` (meaning it was an object that was not null, not any of the "special" things above, and not a list for PS to count).
-  2. If it is a list and has ``0`` elements, return ``$false``.
-  3. If it is a list and has ``1`` element, return the ``IsTrue(list[0])`` value (ie recurse on the one element and return its value.
-  4. If it is a list with more than ``1`` thing in it, return ``$true``.
+	1. If this conversion fails, return ``$true`` (meaning it was an object that was not null, not any of the "special" things above, and not a list for PS to count).
+	2. If it is a list and has ``0`` elements, return ``$false``.
+	3. If it is a list and has ``1`` element, return the ``IsTrue(list[0])`` value (ie recurse on the one element and return its value.
+	4. If it is a list with more than ``1`` thing in it, return ``$true``.
 
 As you can see, the [Array][] and [ArrayList][] fall into rules 6.2-6.4 because they implement [IList][], whereas the [SearchResultCollection][collection] falls into rule 6.1 because it does not implement [IList][] so the conversion to a list fails, which means it was a plain old non-null object which evaluates to ``$true`` in Powershell.
 
