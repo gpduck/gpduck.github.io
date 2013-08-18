@@ -52,6 +52,7 @@ span#blogtitle, span#blogtitle a {
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 10px;
+	padding-bottom: 10px;
 	display: block;
 }
 
@@ -80,7 +81,6 @@ span#blogtitle, span#blogtitle a {
 
 #postfooter {
   padding-top: 10px;
-  padding-bottom: 10px;
   font-size: 0.8em;
 }
 
