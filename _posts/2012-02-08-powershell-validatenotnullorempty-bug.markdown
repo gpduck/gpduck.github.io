@@ -27,11 +27,8 @@ Function test
 
 The expected result when you pass an empty string would be an error stating that the parameter failed vaildation, no matter how you generated that string:
 
-```
-PS> test ""
-
+<span class="code">PS> test ""</span>
 <span style="color: red; background: black;">test : Cannot validate argument on parameter 'param'. The argument is null or empty. Supply an argument that is not null or empty and then try the command again.</span>
-```
 
 However, when you call the function without any parameters, Powershell sees that you forgot a mandatory parameter and prompts you for a value.  If you just press &lt;enter&gt;, the empty string incorrectly passes validation and your function is executed:
 
@@ -68,7 +65,7 @@ else
 //... (continues on to handle special cases for enumerable objects)
 {% endhighlight %}
 
-You can see they are using the [C# as operator][as] to attempt to convert the parameter into a ``string`` object.  The problem is that Powershell uses an [adaptive type system][adaptive] to work magic on some particularly annoying types (XML and WMI come to mind), and apparently the method that is reading the input when you forget to specify a mandatory parameter (and also the Read-Host cmdlet as demonstrated in [677599][]) are returning Powershell objects that ___look___ like strings, but aren't actual .Net strings.
+You can see they are using the [C# as operator][as] to attempt to convert the parameter into a ``string`` object.  The problem is that Powershell uses an [adaptive type system][adaptive] to work magic on some particularly annoying types (XML and WMI come to mind), and apparently the method that is reading the input when you forget to specify a mandatory parameter (and also the Read-Host cmdlet as demonstrated in [677559][]) are returning Powershell objects that ___look___ like strings, but aren't actual .Net strings.
 
 ###Go Vote###
 
