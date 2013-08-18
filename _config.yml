@@ -4,5 +4,5 @@ permalink: /:year/:month/:title.html
 name: "What's Up Duck - Blog"
 baseurl: "http://gpduck.github.io"
 
-paginate: 3
+paginate: 7
 paginate_path: "archive/page:num"
