@@ -114,8 +114,9 @@ mod_auth_kerberos will set your username to your userPrincipalName from AD. In m
 ``authorized_for_all_service_commands=CDUCK@CORP.EXAMPLE.COM``<br />
 ``authorized_for_all_host_commands=CDUCK@CORP.EXAMPLE.COM``</span>
 
-</p><p>You'll want to read the Icinga documentation on the CGI authorization and determine what is appropriate for your environment.</p>
-<p>***** Updated 3-24-2012 - The crypto parameter for the ktpass utility should read "RC4-HMAC-NT" as pointed out by reader Stefan.  Thanks for the correction!</p>
+You'll want to read the Icinga documentation on the CGI authorization and determine what is appropriate for your environment.
+
+***** Updated 3-24-2012 - The crypto parameter for the ktpass utility should read "RC4-HMAC-NT" as pointed out by reader Stefan.  Thanks for the correction!
 
 [cgiauth]: http://docs.icinga.org/1.5.0/en/cgiauth.html
 [kerbtut]: http://grolmsnet.de/kerbtut/
