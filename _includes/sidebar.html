@@ -15,7 +15,7 @@
 	<div class="tagcloud">
 		{% for tag in site.tags %}
 			{% assign tagname = tag | first %}
-			{% assign tagweight = tag | last | size | divided_by: site.tags.size | times: 20 | plus: 10 %}
+			{% assign tagweight = tag | last | size | times: 20 | divided_by: site.tags.size | plus: 10 %}
 			<a href="{{ site.baseurl }}/tag/{{ tagname }}.html" style="font-size: {{ tagweight }}px;">{{ tagname }}</a>
 		{% endfor %}
 	</div>
