@@ -197,7 +197,7 @@ span#blogtitle, span#blogtitle a {
 	}
 }
 
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 1099px) and (min-width: 501px) {
 	span#blogtitle, span#blogtitle a {
 		font-size: 60px;
 	}
@@ -215,7 +215,7 @@ span#blogtitle, span#blogtitle a {
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and (min-width: 361) {
 	body {
 		background: #336699;
 		margin-left: 0px;
