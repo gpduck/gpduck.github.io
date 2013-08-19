@@ -206,11 +206,11 @@ span#blogtitle, span#blogtitle a {
 		width: 94%;
 	}
 	
-	#aboutme .profilename {
-		display: inline;
+	#sidebar {
+		padding-left: 10px;
 	}
 	
-	#aboutme .profilelink {
+	#aboutme .profilename, #aboutme .profilelink {
 		display: inline;
 	}
 	
