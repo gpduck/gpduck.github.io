@@ -32,10 +32,10 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
 	background: black;
 }
 
-.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .c { color: #006400; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { color: #00008b; font-weight: bold } /* Keyword */
-.highlight .o { font-weight: bold } /* Operator */
+.highlight .o { font-weight: bold; color: #000000; } /* Operator */
 .highlight .cm { color: #006400; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
 .highlight .c1 { color: #006400; font-style: italic } /* Comment.Single */
