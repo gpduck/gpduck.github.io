@@ -38,9 +38,8 @@ body {
 }
 
 span#blogtitle, span#blogtitle a {
-  font-family: 'Reenie Beanie', cursive;;
-  font-size: 60px;
-  font-style: normal;
+  font-family: 'Reenie Beanie', cursive;
+   font-style: normal;
   font-variant: normal;
   text-decoration: none;
   color: #ffffff;
@@ -171,6 +170,10 @@ span#blogtitle, span#blogtitle a {
 }
 
 @media screen and (min-width:1100px) {
+	span#blogtitle, span#blogtitle a {
+		font-size: 60px;
+	}
+
 	#bodywrapper {
 		width: 80%;
 	}
@@ -195,6 +198,10 @@ span#blogtitle, span#blogtitle a {
 }
 
 @media screen and (max-width: 1099px) {
+	span#blogtitle, span#blogtitle a {
+		font-size: 60px;
+	}
+
 	#bodywrapper {
 		width: 94%;
 	}
@@ -213,6 +220,10 @@ span#blogtitle, span#blogtitle a {
 		background: #336699;
 		margin-left: 0px;
 		margin-right: 0px;
+	}
+	
+	span#blogtitle, span#blogtitle a {
+		font-size: 60px;
 	}
 	
 	#bodywrapper {

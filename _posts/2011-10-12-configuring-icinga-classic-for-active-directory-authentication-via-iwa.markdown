@@ -70,7 +70,7 @@ ScriptAlias /icinga/cgi-bin "/usr/lib64/icinga/cgi"
 #  Allow from 127.0.0.1
    AuthName "Icinga Access"
 # AuthType Basic  ## CD - Disable Basic Auth
-AuthType Kerberos  # CD - Enable Kerberos Auth
+AuthType Kerberos  ## CD - Enable Kerberos Auth
 KrbAuthRealms CORP.EXAMPLE.COM  ## CD - Set Kerberos Realm
 KrbServiceName HTTP/icinga.example.com@CORP.EXAMPLE.COM  ## CD - Set SPN of service
 Krb5Keytab /etc/httpd/conf/icinga.example.com.keytab  ## CD - Set location of Kerberos keytab
