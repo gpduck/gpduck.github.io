@@ -69,14 +69,14 @@ ScriptAlias /icinga/cgi-bin "/usr/lib64/icinga/cgi"
 #  Deny from all
 #  Allow from 127.0.0.1
    AuthName "Icinga Access"
-<span class="highlight-add"># AuthType Basic</span>
-<span class="highlight-add">   AuthType Kerberos</span>
-<span class="highlight-add">   KrbAuthRealms CORP.EXAMPLE.COM</span>
-<span class="highlight-add">   KrbServiceName HTTP/icinga.example.com@CORP.EXAMPLE.COM</span>
-<span class="highlight-add">   Krb5Keytab /etc/httpd/conf/icinga.example.com.keytab</span>
-<span class="highlight-add">   KrbMethodNegotiate on</span>
-<span class="highlight-add">   KrbMethodK5Passwd on</span>
-<span class="highlight-add">#   AuthUserFile /etc/icinga/htpasswd.users</span>
+# AuthType Basic  ## CD - Disable Basic Auth
+AuthType Kerberos  ## CD - Enable Kerberos Auth
+KrbAuthRealms CORP.EXAMPLE.COM  ## CD - Set Kerberos Realm
+KrbServiceName HTTP/icinga.example.com@CORP.EXAMPLE.COM  ## CD - Set SPN of service
+Krb5Keytab /etc/httpd/conf/icinga.example.com.keytab  ## CD - Set location of Kerberos keytab
+KrbMethodNegotiate on  ## CD - Enable negotiate
+KrbMethodK5Passwd on  ## CD - Enable password auth with Kerberos
+#   AuthUserFile /etc/icinga/htpasswd.users  ## CD - Disable htpasswd file
    Require valid-user
 
 Alias /icinga "/usr/share/icinga/"
@@ -91,15 +91,15 @@ Alias /icinga "/usr/share/icinga/"
 #  Deny from all
 #  Allow from 127.0.0.1
    AuthName "Icinga Access"
-<span class="highlight-add"># AuthType Basic</span>
-<span class="highlight-add">   AuthType Kerberos</span>
-<span class="highlight-add">   KrbAuthRealms CORP.EXAMPLE.COM</span>
-<span class="highlight-add">   KrbServiceName HTTP/icinga.example.com@CORP.EXAMPLE.COM</span>
-<span class="highlight-add">   Krb5Keytab /etc/httpd/conf/icinga.example.com.keytab</span>
-<span class="highlight-add">   KrbMethodNegotiate on</span>
-<span class="highlight-add">   KrbMethodK5Passwd on</span>
-<span class="highlight-add">#   AuthUserFile /etc/icinga/htpasswd.users</span>
-   Require valid-user
+# AuthType Basic  ## CD - Disable Basic Auth
+AuthType Kerberos  ## CD - Enable Kerberos Auth
+KrbAuthRealms CORP.EXAMPLE.COM  ## CD - Set Kerberos Realm
+KrbServiceName HTTP/icinga.example.com@CORP.EXAMPLE.COM  ## CD - Set SPN of service
+Krb5Keytab /etc/httpd/conf/icinga.example.com.keytab  ## CD - Set location of Kerberos keytab
+KrbMethodNegotiate on  ## CD - Enable negotiate
+KrbMethodK5Passwd on  ## CD - Enable password auth with Kerberos
+#   AuthUserFile /etc/icinga/htpasswd.users  ## CD - Disable htpasswd file
+Require valid-user
 {% endhighlight %}
 
 Restart Apache (/etc/init.d/httpd restart) and you should be able to authenticate via IWA to your Icinga site.
@@ -108,11 +108,13 @@ Restart Apache (/etc/init.d/httpd restart) and you should be able to authenticat
 
 mod_auth_kerberos will set your username to your userPrincipalName from AD. In my implementation, the entire userPrincipalName was converted to upper case, even though it wasn't set that way in Active Directory.  So for this example my username according to Icinga would be CDUCK@CORP.EXAMPLE.COM.  This is the value that you need to use to grant permissions in the [Icinga CGIs][cgiauth]. In my case, my Icinga CGI config file was at /etc/icinga/cgi.cfg and I edited the following lines to grant my account access:
 
-<span class="code">``authorized_for_system_information=CDUCK@CORP.EXAMPLE.COM``<br />
-``authorized_for_configuration_information=CDUCK@CORP.EXAMPLE.COM``<br />
-``authorized_for_system_commands=CDUCK@CORP.EXAMPLE.COM``<br />
-``authorized_for_all_service_commands=CDUCK@CORP.EXAMPLE.COM``<br />
-``authorized_for_all_host_commands=CDUCK@CORP.EXAMPLE.COM``</span>
+{% highlight ini %}
+authorized_for_system_information=CDUCK@CORP.EXAMPLE.COM
+authorized_for_configuration_information=CDUCK@CORP.EXAMPLE.COM
+authorized_for_system_commands=CDUCK@CORP.EXAMPLE.COM
+authorized_for_all_service_commands=CDUCK@CORP.EXAMPLE.COM
+authorized_for_all_host_commands=CDUCK@CORP.EXAMPLE.COM
+{% endhighlight %}
 
 You'll want to read the Icinga documentation on the CGI authorization and determine what is appropriate for your environment.
 
