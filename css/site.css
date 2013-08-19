@@ -246,7 +246,7 @@ span#blogtitle, span#blogtitle a {
 }
 
 @media screen and (max-width: 360px) {
-	span#blogtitle, span#blogtitle {
-		font-size: 39px !important;
+	span#blogtitle, span#blogtitle a {
+		font-size: 39px;
 	}
 }
