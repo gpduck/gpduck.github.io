@@ -139,6 +139,10 @@ span#blogtitle, span#blogtitle a {
 	color: #cccccc;
 }
 
+#sidebar hr {
+	clear: both;
+}
+
 #aboutme .profileimage {
 	float: left;
 	padding-right: 10px;
@@ -175,7 +179,7 @@ span#blogtitle, span#blogtitle a {
 	}
 
 	#bodywrapper {
-		width: 80%;
+		width: 85%;
 	}
 	
 	#post {
@@ -186,10 +190,6 @@ span#blogtitle, span#blogtitle a {
 		float: right;
 		width: 250px;
 		padding-left: 15px;
-	}
-	
-	#sidebar hr {
-		clear: both;
 	}
 	
 	body {
@@ -206,7 +206,23 @@ span#blogtitle, span#blogtitle a {
 		width: 94%;
 	}
 	
-	#sidebar {
+	#aboutme .profilename {
+		display: inline;
+	}
+	
+	#aboutme .profilelink {
+		display: inline;
+	}
+	
+	#aboutme .widgettitle {
+		display: none;
+	}
+	
+	#twitter {
+		display: none;
+	}
+	
+	#tagcloud { 
 		display: none;
 	}
 	
