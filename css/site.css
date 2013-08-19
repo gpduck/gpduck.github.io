@@ -171,6 +171,12 @@ span#blogtitle, span#blogtitle a {
 	display: block;
 }
 
+@media screen and (min-height:576px) {
+	body {
+		background: #336699 url(/images/DSC_1416.jpg) no-repeat fixed top center;
+	}
+}
+
 @media screen and (min-width:1100px) {
 	span#blogtitle, span#blogtitle a {
 		font-size: 60px;
@@ -190,10 +196,6 @@ span#blogtitle, span#blogtitle a {
 		width: 250px;
 		padding-left: 15px;
 		margin-top: 20px;
-	}
-	
-	body {
-		background: #336699 url(/images/DSC_1416.jpg) no-repeat fixed top center;
 	}
 }
 
