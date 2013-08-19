@@ -3,6 +3,7 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
 .highlight  {
   background: #ffffff;
   overflow: auto;
+	color: #000000;
 }
 
 .highlight pre {
