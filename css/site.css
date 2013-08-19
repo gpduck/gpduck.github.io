@@ -1,10 +1,10 @@
 a:link {
-  color: #ff9900;
+	color: #ff9900;
 	text-decoration: none;
 }
 
 a:visited {
-  color: #dd7700;
+	color: #dd7700;
 	text-decoration: none;
 }
 
@@ -14,35 +14,34 @@ html {
 }
 
 body {
-  font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
-  margin: 0px;
-  background: #336699 url(/images/DSC_1416_lo.jpg) no-repeat fixed top center;
+	font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+	margin: 0px;
+	background: #336699 url(/images/DSC_1416_lo.jpg) no-repeat fixed top center;
 	min-height: 100%;
 	height: 100%;
 }
 
 #bodywrapper {
-  background: transparent url(/images/black50.png) repeat scroll top left;
-  margin-left: auto;
-  margin-right: auto;
-  /* moved to @media section width: 80%; */
-  padding-top: 25px;
-  padding-left: 20px;
+	background: transparent url(/images/black50.png) repeat scroll top left;
+	margin-left: auto;
+	margin-right: auto;
+	/* moved to @media section width: 80%; */
+	padding-top: 25px;
+	padding-left: 20px;
 	padding-right: 20px;
 }
 
 #pageheader {
-  padding-left: 10px;
-  padding-bottom: 25px;
-  display: block;
+	padding-left: 10px;
+	display: block;
 }
 
 span#blogtitle, span#blogtitle a {
-  font-family: 'Reenie Beanie', cursive;
-   font-style: normal;
-  font-variant: normal;
-  text-decoration: none;
-  color: #ffffff;
+	font-family: 'Reenie Beanie', cursive;
+	font-style: normal;
+	font-variant: normal;
+	text-decoration: none;
+	color: #ffffff;
 }
 
 #post {
@@ -53,6 +52,7 @@ span#blogtitle, span#blogtitle a {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	display: block;
+	font-size: 16px;
 }
 
 .postsummary {
@@ -61,34 +61,35 @@ span#blogtitle, span#blogtitle a {
 
 .postexcerpt {
 	padding-left: 30px;
+	font-size: 1em;
 }
 
 .posttags {
-	font-size: 12px;
+	font-size: .75em;
 }
 
 #postheader {
-  margin-left: -10px;
+	margin-left: -10px;
 }
 
 .postdate, #postdate {
-  display: block;
-  font-size: 15px;
-  font-family: Molengo, Helvetica, FreeSans, sans-serif;
-  color: #cccccc;
+	display: block;
+	font-size: .94em;
+	font-family: Molengo, Helvetica, FreeSans, sans-serif;
+	color: #cccccc;
 }
 
 .posttitle, #posttitle {
-  display: block;
-  margin: 0;
-  font-size: 22px;
-  font-family: Nobile, Helvetica, FreeSans, sans-serif;
-  color: #ffaa00;
+	display: block;
+	margin: 0;
+	font-size: 1.3em;
+	font-family: Nobile, Helvetica, FreeSans, sans-serif;
+	color: #ffaa00;
 	font-weight: bold;
 }
 
 #postcontent {
-  font-size: 15px;
+	font-size: 15px;
 }
 
 #postcontent h3 {
@@ -98,8 +99,8 @@ span#blogtitle, span#blogtitle a {
 }
 
 #postfooter {
-  padding-top: 10px;
-  font-size: 0.8em;
+	padding-top: 10px;
+	font-size: 0.8em;
 }
 
 #sharinglinks {
@@ -107,7 +108,7 @@ span#blogtitle, span#blogtitle a {
 }
 
 .postnav {
-	font-size: 20px;
+	font-size: 1.4em;
 	padding-bottom: 5px;
 	height: 22px;
 }
@@ -134,9 +135,13 @@ span#blogtitle, span#blogtitle a {
 }
 
 .widgettitle {
-	font-size: 18px;
+	font-size: 1.2em;
 	padding-bottom: 5px;
 	color: #cccccc;
+}
+
+#sidebar {
+	font-size: 15px;
 }
 
 #sidebar hr {
@@ -149,28 +154,29 @@ span#blogtitle, span#blogtitle a {
 }
 
 #aboutme .profilename {
-	font-size: 20px;
+	font-size: 1.3em;
 	font-weight: bold;
 }
 
 #aboutme .profilelink {
-	font-size: 14px;
+	font-size: 1em;
 }
 
 #pagefooter {
-  clear: both;
-  padding-top: 10px;
-  padding-bottom: 10px;
+	clear: both;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 14px
 }
 
 #pagefootercontent {
-  text-align: center;
-  color: #cccccc;
-  font-size: 14px;
+	text-align: center;
+	color: #cccccc;
+	font-size: 1em;
 }
 
 .post-author {
-  display: block;
+	display: block;
 }
 
 @media screen and (min-width:1100px) {
@@ -184,12 +190,14 @@ span#blogtitle, span#blogtitle a {
 	
 	#post {
 		margin-right: 265px;
+		margin-top: 20px;
 	}
 	
 	#sidebar {
 		float: right;
 		width: 250px;
 		padding-left: 15px;
+		margin-top: 20px;
 	}
 	
 	body {
@@ -217,13 +225,28 @@ span#blogtitle, span#blogtitle a {
 	#aboutme .widgettitle {
 		display: none;
 	}
-	
+
+	#aboutme .profileimage {
+		float: right;
+		position: relative;
+		top: -55px;
+		left: 10px;
+	}
+
+	#aboutme hr {
+		display: none;
+	}
+
 	#twitter {
 		display: none;
 	}
 	
 	#tagcloud { 
 		display: none;
+	}
+
+	#post {
+		margin-top: 10px;
 	}
 	
 	.highlight .lineno {
@@ -246,6 +269,15 @@ span#blogtitle, span#blogtitle a {
 		width: 100%;
 		padding-left: 0px;
 	}
+
+	#aboutme .profileimage {
+		display: none;
+	}
+	
+	#sidebar {
+		padding-left: 8px;
+		font-size: 12px;
+	}
 	
 	#post {
 		padding-left: 8px;
@@ -264,5 +296,9 @@ span#blogtitle, span#blogtitle a {
 @media screen and (max-width: 360px) {
 	span#blogtitle, span#blogtitle a {
 		font-size: 39px;
+	}
+
+	#sidebar {
+		font-size: 11px;
 	}
 }
