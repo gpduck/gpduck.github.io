@@ -64,10 +64,6 @@ span#blogtitle, span#blogtitle a {
 	font-size: 1em;
 }
 
-.posttags {
-	font-size: .75em;
-}
-
 #postheader {
 	margin-left: -10px;
 }
@@ -88,10 +84,6 @@ span#blogtitle, span#blogtitle a {
 	font-weight: bold;
 }
 
-#postcontent {
-	font-size: 15px;
-}
-
 #postcontent h3 {
 	font-weight: bold;
 	margin-left: -10px;
@@ -100,7 +92,7 @@ span#blogtitle, span#blogtitle a {
 
 #postfooter {
 	padding-top: 10px;
-	font-size: 0.8em;
+	font-size: 0.9em;
 }
 
 #sharinglinks {
