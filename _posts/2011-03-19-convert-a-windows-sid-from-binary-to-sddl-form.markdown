@@ -166,7 +166,7 @@ $BinarySid<br />
 To bring this example back around full circle, the last bit is to save the new binary SID back into the database:
 
 <div class="psconsole">#Create a template string to perform the update in SQL, in my case there is only 1 row in the table so it is easy<br />
-$SQLUpdate = "UPDATE [FIMDatabase].[mms_server_configuration] set [<span class="Apple-style-span" style="color: darkred; font-family: Consolas, 'Lucida Console'; font-size: 13px; white-space: nowrap;">operators_sid</span>] = {0}"<br />
+$SQLUpdate = "UPDATE [FIMDatabase].[mms_server_configuration] set [operators_sid] = {0}"<br />
 Invoke-SQLCmd ($SQLUpdate -f $BinarySid)</div>
 
 I'll talk about why I'm actually doing all this in another post.
