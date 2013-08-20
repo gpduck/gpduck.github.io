@@ -17,7 +17,7 @@ You can reproduce this error on 2008 R2 with IIS or the File Services role insta
     UserPolicy = Undefined<br />
     Process = Undefined<br />
     CurrentUser = Undefined<br />
-    LocalMachine = RemoteSigned</span></blockquote></li>
+    LocalMachine = RemoteSigned</div>
 
 2. Run the IIS or File Services BPA, this should be successful
 3. Set the ExecutionPolicy in your Local Computer Policy:
@@ -27,7 +27,7 @@ You can reproduce this error on 2008 R2 with IIS or the File Services role insta
 4. Verify that your ExecutionPolicy is now defined as a Group/Local Policy:
 
     <div class="psconsole">PS> Get-ExecutionPolicy -List<br />
-
+    <br />
     MachinePolicy = RemoteSigned<br />
     UserPolicy = Undefined<br />
     Process = Undefined<br />
@@ -55,19 +55,18 @@ Rather than constantly have to move our Exchange servers in and out of the GPO, 
 
 4. Now create a second registry item that will cover 32-bit Powershell on 64-bit machines:
 
-  * Action: ``Update``
-  * Hive: ``HKEY_LOCAL_MACHINE
-  * Key Path: ``SOFTWARE\Wow6432Node\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell``
-  * Value name: ``ExecutionPolicy``
-  * Value type: ``REG_SZ``
-  * Value data: ``RemoteSigned``
-
-  * On the "Common" tab...
-      1. Check Item-level targeting
-      2. Press the "Targeting" button
-      3. Create a new "Environment Variable" item
-      4. Name: ``PROCESSOR_ARCHITECTURE``
-      5. Value: ``AMD64``
+    * Action: ``Update``
+    * Hive: ``HKEY_LOCAL_MACHINE``
+    * Key Path: ``SOFTWARE\Wow6432Node\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell``
+    * Value name: ``ExecutionPolicy``
+    * Value type: ``REG_SZ``
+    * Value data: ``RemoteSigned``
+    * On the "Common" tab...
+        1. Check Item-level targeting
+        2. Press the "Targeting" button
+        3. Create a new "Environment Variable" item
+        4. Name: ``PROCESSOR_ARCHITECTURE``
+        5. Value: ``AMD64``
 
 5. Verify that only the local settings are being applied and that the preference will reset the value if a user changes it:
 
