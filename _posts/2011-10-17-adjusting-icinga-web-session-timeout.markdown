@@ -22,6 +22,6 @@ Setting the PHP max session lifetime to 0 will cause no sessions to be cleaned o
 ####To adjust the Icinga-Web session cookie lifetime variable:####
 
 1. Open ``/usr/local/icinga-web/app/config/factories.site.xml``
-2. Adjust the ``&lt;ae:parameter name="session_cookie_lifetime"&gt;`` parameter to a more appropriate value
+2. Adjust the ``<ae:parameter name="session_cookie_lifetime">`` parameter to a more appropriate value
 
 This value sets the lifetime of the cookie in your browser.  Setting it to 0 will cause Icinga-Web to create a session cookie that will be valid for as long as your browser is open.  This is a reasonable setting for your browser, but you will still be subjected to the PHP max lifetime value, so you will still experience timeouts.
