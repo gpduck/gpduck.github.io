@@ -6,7 +6,7 @@ author: { link: "https://plus.google.com/111921112014612222144/about", name: Chr
 ---
 One of the more interesting values to determine how much memory to allocate a machine is the *Peak Committed Bytes*. This value is available as "Commit Charge (K) - Peak" from Windows 2003 Task Manger and from [Sysinternals Process Explorer][procexp] and is a good representation of the maximum amount of memory that has been used at once since the computer was last rebooted. Wikipedia has more details about the [Commit Charge][] numbers if you want to read more.
 
-The current committed bytes and current commit limit are both available as memory performance counters and can be accessed using the WMI class ``Win32_PerfFormattedData_PerfOS_Memory``<sup>[1]</sup> as ``CommitLimit`` and ``CommittedBytes``. Unfortunately, Microsoft has not provided a performance counter for the peak committed bytes. In fact, the only way I have been able to locate this counter is through the undocumented<sup>[2]</sup> ``NtQuerySystemInformation`` function of ntdll.dll.
+The current committed bytes and current commit limit are both available as memory performance counters and can be accessed using the WMI class [``Win32_PerfFormattedData_PerfOS_Memory``][perfosmemory] as ``CommitLimit`` and ``CommittedBytes``. Unfortunately, Microsoft has not provided a performance counter for the peak committed bytes. In fact, the only way I have been able to locate this counter is through the undocumented [``NtQuerySystemInformation``][querysysinfo] function of ntdll.dll.
 
 Powershell can be used to call unmanaged APIs as described in [Powershell P/Invoke Walkthrough][holmes] by Lee Holmes. I used the information in Lee's post as well as the examples on [www.pinvoke.net][pinvoke] and the python solution by Mike Driscoll at [Python: Finding the Commit Charge Values in Windows][pyhonpeak] to construct the following Powershell script to query for the committed bytes peak value:
 
@@ -140,11 +140,7 @@ $outlen = New-Object int
 return $out.PeakCommitment * 4096
 {% endhighlight %}
 
-As shown in the examples included in the script, this can be used with ``Invoke-Command`` to run on remote servers. It could even be combined with ``Win32_OperatingSystem.TotalVisibleMemorySize``<sup>[3]</sup> to determine if a server has enough (or too much) memory allocated to it. Just remember that the counter starts over every time the server is rebooted, so make sure there has been plenty of time since the last reboot when you are reading this number or it may not be an accurate reflection of all of the server's workloads.
-
-1. [Win32_PerfFormattedData_PerfOS_Memory][perfosmemory] on MSDN
-2. [NtQuerySystemInformation][querysysinfo] on MSDN
-3. [Win32_OperatingSystem][win32os] on MSDN
+As shown in the examples included in the script, this can be used with ``Invoke-Command`` to run on remote servers. It could even be combined with [``Win32_OperatingSystem.TotalVisibleMemorySize``][win32os] to determine if a server has enough (or too much) memory allocated to it. Just remember that the counter starts over every time the server is rebooted, so make sure there has been plenty of time since the last reboot when you are reading this number or it may not be an accurate reflection of all of the server's workloads.
 
 [procexp]: http://technet.microsoft.com/en-us/sysinternals/bb896653.aspx
 [commit charge]: http://en.wikipedia.org/wiki/Commit_charge
