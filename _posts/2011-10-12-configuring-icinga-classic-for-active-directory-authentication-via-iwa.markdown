@@ -48,7 +48,7 @@ Now you need to change the owner and permissions for the keytab to the apache us
 
 ###Configure Apache to use Kerberos###
 
-Edit your icinga.conf apache file (mine is at /etc/httpd/conf.d/icinga.conf). You need to add the [kerberos authorization module][modauthkerb] and then configure the Icinga directories to use it for authentication. Here is my icinga.conf with the changes <span class="highlight-add">highlighted</span>:
+Edit your icinga.conf apache file (mine is at /etc/httpd/conf.d/icinga.conf). You need to add the [kerberos authorization module][modauthkerb] and then configure the Icinga directories to use it for authentication. Here is my icinga.conf with the changes marked with ## CD:
 
 {% highlight apacheconf %}
 # SAMPLE CONFIG SNIPPETS FOR APACHE WEB SERVER
