@@ -46,12 +46,12 @@ Rather than constantly have to move our Exchange servers in and out of the GPO, 
 2. Browse to Computer Configuration&gt; Preferences&gt;Windows Settings&gt; Registry
 3. Right click and create a new registry item:
 
-  * Action: ``Update``
-  * Hive: ``HKEY_LOCAL_MACHINE``
-  * Key Path: ``SOFTWARE\Microsoft\PowersShell\1\ShellIds\Microsoft.PowerShell``
-  * Value name: ``ExecutionPolicy``
-  * Value type: ``REG_SZ``
-  * Value data: ``RemoteSigned``
+    * Action: ``Update``
+    * Hive: ``HKEY_LOCAL_MACHINE``
+    * Key Path: ``SOFTWARE\Microsoft\PowersShell\1\ShellIds\Microsoft.PowerShell``
+    * Value name: ``ExecutionPolicy``
+    * Value type: ``REG_SZ``
+    * Value data: ``RemoteSigned``
 
 4. Now create a second registry item that will cover 32-bit Powershell on 64-bit machines:
 
