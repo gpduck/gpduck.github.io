@@ -8,7 +8,7 @@ One of the more interesting values to determine how much memory to allocate a ma
 
 The current committed bytes and current commit limit are both available as memory performance counters and can be accessed using the WMI class [``Win32_PerfFormattedData_PerfOS_Memory``][perfosmemory] as ``CommitLimit`` and ``CommittedBytes``. Unfortunately, Microsoft has not provided a performance counter for the peak committed bytes. In fact, the only way I have been able to locate this counter is through the undocumented [``NtQuerySystemInformation``][querysysinfo] function of ntdll.dll.
 
-Powershell can be used to call unmanaged APIs as described in [Powershell P/Invoke Walkthrough][holmes] by Lee Holmes. I used the information in Lee's post as well as the examples on [www.pinvoke.net][pinvoke] and the python solution by Mike Driscoll at [Python: Finding the Commit Charge Values in Windows][pyhonpeak] to construct the following Powershell script to query for the committed bytes peak value:
+Powershell can be used to call unmanaged APIs as described in [Powershell P/Invoke Walkthrough][holmes] by Lee Holmes. I used the information in Lee's post as well as the examples on [www.pinvoke.net][pinvoke] and the python solution by Mike Driscoll at [Python: Finding the Commit Charge Values in Windows][pythonpeak] to construct the following Powershell script to query for the committed bytes peak value:
 
 {% highlight powershell linenos %}
 <# 
