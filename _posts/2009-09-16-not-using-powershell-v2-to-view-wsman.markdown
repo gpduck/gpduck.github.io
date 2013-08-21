@@ -39,9 +39,9 @@ After installing many different versions of Wireshark (1.2.2 for x86 worked) , I
 
 Sep 16 21:34:00 xvhalp22 openwsman(pam_unix)[12388]: bad username [\5297c1ab-ecf9-43c1-6b4a-cb7dce63d813]
 
-I decided to try and determine if the Powershell cmdlet was the culprit or if it was the .Net implementation of WSMan that was adding the extra character, so I did a little searching and came across this blog post that includes a function that allows you to pipe a cmdlet to it and it will locate the appropriate class and DLL and then load it up in Reflector ([A trick to jump directly to a Cmdlet’s implementation in Reflector][cmdletreflector]).  The command would be:
+I decided to try and determine if the Powershell cmdlet was the culprit or if it was the .Net implementation of WSMan that was adding the extra character, so I did a little searching and came across this blog post that includes a function that allows you to pipe a cmdlet to it and it will locate the appropriate class and DLL and then load it up in Reflector ([A trick to jump directly to a Cmdlet's implementation in Reflector][cmdletreflector]).  The command would be:
 
-<div class="psconsole">get-command Get-WSManInstance | Reflect-Cmdlet</div>
+<div class="psconsole">PS> get-command Get-WSManInstance | Reflect-Cmdlet</div>
 
 What I found after a little digging is that in the CreateSessionObject function of the WSManHelper class, they are setting the credentials as follows:
 
