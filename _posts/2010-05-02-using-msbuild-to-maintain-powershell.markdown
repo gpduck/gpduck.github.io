@@ -51,7 +51,7 @@ The following folder structure is used within the workspace:
 
 * **$ws\src\Module**
 
-    Each module gets a new folder under ``$ws\src\Modules\&lt;modulename&gt;``
+    Each module gets a new folder under ``$ws\src\Modules\<modulename>``
 
 * **$ws\src\Scripts**
 
@@ -216,8 +216,14 @@ This post shows two examples of how to configure a simple MSBuild project to ena
 
 The following links were helpful to me in learning the necessary MSBuild syntax to write these build scripts.
 
-1. [MSBuild Command Line Reference](http://msdn.microsoft.com/en-us/library/ms164311.aspx)
-2. [MSBuild Project File Schema Reference](<http://msdn.microsoft.com/en-us/library/5dy88c2e(VS.90).aspx>)
-3. [MSBuild Task Reference](<http://msdn.microsoft.com/en-us/library/7z253716(VS.90).aspx>)
-4. [MSBuild Reserved Properties Reference](<http://msdn.microsoft.com/en-us/library/ms164309(VS.90).aspx>)
-5. [MSBuild Basics Tutorial](http://brennan.offwhite.net/blog/2006/11/29/msbuild-basics-1of7/)
+1. [MSBuild Command Line Reference][cli]
+2. [MSBuild Project File Schema Reference][schema]
+3. [MSBuild Task Reference][taskref]
+4. [MSBuild Reserved Properties Reference][reservedprops]
+5. [MSBuild Basics Tutorial][basics]
+
+[cli]: http://msdn.microsoft.com/en-us/library/ms164311.aspx
+[schema]: http://msdn.microsoft.com/en-us/library/5dy88c2e(VS.90).aspx
+[taskref]: http://msdn.microsoft.com/en-us/library/7z253716(VS.90).aspx
+[reservedprops]: http://msdn.microsoft.com/en-us/library/ms164309(VS.90).aspx
+[basics]: http://brennan.offwhite.net/blog/2006/11/29/msbuild-basics-1of7/

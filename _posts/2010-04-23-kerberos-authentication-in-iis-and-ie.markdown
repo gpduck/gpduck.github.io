@@ -15,8 +15,10 @@ This post is going to cover the basics of getting Kerberos working and the speed
 Initially, you need to determine two pieces of information to successfully implement Kerberos:
 
 1. What is the URL my service will be exposed at?
+
     For example: ``http://www.example.com``
 2. What is the account the service will be running as?
+
     For example: ``corp.example.com\wwwPool``
 
 ###Determining the SPN###
@@ -38,7 +40,7 @@ If you are running this site on multiple servers (ie behind a load balancer or u
 
 Since I used a domain account in my example above, I would use the following command to create my SPN <sup>[1]</sup>:
 
-> ``setspn.exe -s& HTTP/www.example.com corp.example.com\wwwPool``
+> ``setspn.exe -s HTTP/www.example.com corp.example.com\wwwPool``
  
 If you have applied KB908209 and are running your site on a non-standard port, you would use:
 
