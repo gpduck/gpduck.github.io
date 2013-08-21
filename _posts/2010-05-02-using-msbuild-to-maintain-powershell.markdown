@@ -20,7 +20,7 @@ This also works well if there is a source control system maintaining the master 
 
 ###Environment and Directory Layout###
 
-The easiest way to run a build is to add ``msbuild.exe to the PATH environment variable and call it from a folder containing a ``.proj`` file. This will invoke the default target in the ``.proj`` file and doesn't require any parameters to be passed to msbuild. ``Msbuild.exe`` is included in the v2.0.50727 and v3.5 framework folders, usually located at ``C:\windows\Microsoft.NET\Framework``. Here is a batch file that can be run easily from explorer to run a build in its current folder:
+The easiest way to run a build is to add ``msbuild.exe`` to the PATH environment variable and call it from a folder containing a ``.proj`` file. This will invoke the default target in the ``.proj`` file and doesn't require any parameters to be passed to msbuild. ``Msbuild.exe`` is included in the v2.0.50727 and v3.5 framework folders, usually located at ``C:\windows\Microsoft.NET\Framework``. Here is a batch file that can be run easily from explorer to run a build in its current folder:
 
 {% highlight bat %}
 @echo off</span><br />
@@ -51,7 +51,7 @@ The following folder structure is used within the workspace:
 
 * **$ws\src\Module**
 
-    Each module gets a new folder under ``$ws\src\Modules\&lt;modulename&gt;
+    Each module gets a new folder under ``$ws\src\Modules\&lt;modulename&gt;``
 
 * **$ws\src\Scripts**
 
