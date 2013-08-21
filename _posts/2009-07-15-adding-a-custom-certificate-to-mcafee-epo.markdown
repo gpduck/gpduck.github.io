@@ -13,7 +13,26 @@ The main idea here is to import a certificate that will be trusted by your brows
 In order to locate the correct keystore, I loaded up the Tomcat configuration file located at ``c:\Program Files\McAfee\ePolicy Orchestrator\Server\conf\server.xml``. From here, you need to locate the "Connector" element that is binding to the port for the site you are using. In our case, this is 8443 so the element looks like this:
 
 {% highlight xml %}
-<connector acceptcount="100" ciphers="...list of encyrption algorithms..." clientauth="false" disableuploadtimeout="true" enablelookups="false" keystorefile="keystore/server.keystore" keystorepass="*****" maxhttpheadersize="8192" maxsparethreads="75" maxthreads="150" minsparethreads="25" port="8443" scheme="https" secure="true" server="Undefined" sslprotocol="TLS" truststorefile="keystore/ca.keystore" truststorepass="*****" uriencoding="UTF-8"></connector>
+<connector acceptcount="100"
+  ciphers="...list of encyrption algorithms..."
+  clientauth="false"
+  disableuploadtimeout="true"
+  enablelookups="false"
+  keystorefile="keystore/server.keystore"
+  keystorepass="*****"
+  maxhttpheadersize="8192"
+  maxsparethreads="75"
+  maxthreads="150"
+  minsparethreads="25"
+  port="8443"
+  scheme="https"
+  secure="true"
+  server="Undefined"
+  sslprotocol="TLS"
+  truststorefile="keystore/ca.keystore"
+  truststorepass="*****"
+  uriencoding="UTF-8">
+</connector>
 {% endhighlight %}
 
 Sun Java provides a tool to edit keystores called [keytool.exe][keytool]. However, there is a limitation on this tool (described [here][importingkeys]) that prevents us from adding a private key separately. Fortunately ePO uses the latest version of Java, so we do have the ability to import a PKCS12 file containing both our public certificate as well as our private key.
