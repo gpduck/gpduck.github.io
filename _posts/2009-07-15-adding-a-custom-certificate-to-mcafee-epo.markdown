@@ -57,7 +57,7 @@ PS> keytool -delete -alias cacert -keystore server.keystore<br />
 PS> keytool -importkeystore -srckeystore c:\customcert\store.pfx -destkeystore server.keystore -srcstoretype pkcs12<br />
 PS> keytool -changealias -keystore server.keystore -alias 1 -destalias mykey</div>
 
-Finally, you just need to restart all 3 ePO services. Tomcat should now be providing your custom certificate.
+Finally, you just need to restart all 3 ePO services. Tomcat should now be serving your custom certificate.
 
 [kb52736]: https://kc.mcafee.com/corporate/index?page=content&amp;id=KB52736
 [keytool]: http://java.sun.com/javase/6/docs/technotes/tools/windows/keytool.html
