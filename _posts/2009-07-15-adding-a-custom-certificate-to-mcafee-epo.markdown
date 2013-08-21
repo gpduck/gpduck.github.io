@@ -24,8 +24,8 @@ First, I had to get my separate files into one PKCS12 file. I did this using the
 
 Now that I have a PKCS12 file with both the certificate and private key, I can import those into the Java keystore for Tomcat. My first step was to add the JRE\bin to my path and change to the directory of the keystore:
 
-<div class="psconsole">PS> set path=%path%;c:\Program Files\McAfee\ePolicy Orchestrator\JRE\bin<br />
-PS> cd C:\Program Files\McAfee\ePolicy Orchestrator\Server\keystore\</div>
+<div class="psconsole">PS> $env:path += ";c:\Program Files\McAfee\ePolicy Orchestrator\JRE\bin"<br />
+PS> cd 'C:\Program Files\McAfee\ePolicy Orchestrator\Server\keystore\'</div>
  
 Next I made a backup of the original McAfee keystore (so we can go back to the supported configuration if needed):
 
@@ -35,7 +35,7 @@ Then I deleted the existing certificate and private key from the keystore, then 
 
 <div class="psconsole">PS> keytool -delete -alias mykey -keystore server.keystore<br />
 PS> keytool -delete -alias cacert -keystore server.keystore<br />
-PS> keytool -importkeystore -srckeystore c:\vhacert\store.pfx -destkeystore server.keystore -srcstoretype pkcs12<br />
+PS> keytool -importkeystore -srckeystore c:\customcert\store.pfx -destkeystore server.keystore -srcstoretype pkcs12<br />
 PS> keytool -changealias -keystore server.keystore -alias 1 -destalias mykey</div>
 
 Finally, you just need to restart all 3 ePO services. Tomcat should now be providing your custom certificate.
