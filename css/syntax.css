@@ -36,7 +36,7 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
 .highlight .c { color: #006400; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2; font-style: normal; } /* Error */
 .highlight .k { color: #00008b; font-weight: bold; font-style: normal; } /* Keyword */
-.highlight .o { font-weight: bold; color: #000000; } /* Operator */
+.highlight .o { font-weight: bold; color: #000000; font-style: normal; } /* Operator */
 .highlight .cm { color: #006400; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
 .highlight .c1 { color: #006400; font-style: italic } /* Comment.Single */
