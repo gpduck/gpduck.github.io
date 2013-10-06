@@ -71,7 +71,7 @@ span#blogtitle, span#blogtitle a {
 .postdate, #postdate {
 	display: block;
 	font-size: .94em;
-	font-family: 'Bree Serif', serif;
+	font-family: 'Open Sans', Helvetica, FreeSans, sans-serif;
 	color: #cccccc;
 }
 
