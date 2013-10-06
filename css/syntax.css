@@ -3,7 +3,7 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
 .highlight  {
   background: #ffffff;
   overflow: auto;
-	color: #000000;
+  color: #000000;
 }
 
 .highlight pre {
@@ -15,6 +15,7 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
   background: #606060;
   padding-left: 4px;
   padding-right: 5px;
+  font-style: normal;
 }
 
 .psconsole {
