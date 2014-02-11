@@ -235,6 +235,10 @@ span#blogtitle, span#blogtitle a {
 		display: none;
 	}
 	
+	#summitbadge {
+		display: none;
+	}
+	
 	#tagcloud { 
 		display: none;
 	}
