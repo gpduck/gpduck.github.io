@@ -81,7 +81,6 @@ function Test-SslProtocols {
         $ProtocolStatus.Add($ProtocolName, $true)
       } catch  {
         $ProtocolStatus.Add($ProtocolName, $false)
-        #Write-Error -Message "Unknown exception connecting to $ComputerName" -Exception $_.Exception
       } finally {
         $SslStream.Close()
       }
