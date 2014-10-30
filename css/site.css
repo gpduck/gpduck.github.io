@@ -295,6 +295,10 @@ span#blogtitle, span#blogtitle a {
 	#postcontent h3 {
 		margin-left: 0px;
 	}
+	
+	.gist-meta a:first-child {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 360px) {
