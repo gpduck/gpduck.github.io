@@ -1,2 +1,27 @@
 &#169; 2013 Chris Duck - Powered by <a href="http://pages.github.com/">GitHub Pages</a><br />
 <!-- Built at: {{ site.time }} -->
+<!-- https://www.chrispoulter.com/blog/post/loading-gists-asynchronously -->
+<script type="text/javascript">
+$(function () {
+	$("[data-gist]").each(function () {
+		var $element = $(this);
+		var id = $element.attr("data-gist");
+		
+		$element.html("<p>Loading Gist...</p>");
+		
+		$.ajax({
+			url: "https://gist.github.com/" + id + ".json",
+			dataType: "jsonp",
+			cache: true,
+			success: function (data) {
+				if (data && data.div) {
+					$element.html(data.div);
+				}
+			},
+			error: function () {
+				$element.html("<p>Gist Load Failed</p>");
+			}
+		});
+	});
+});
+</script>
