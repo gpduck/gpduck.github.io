@@ -250,6 +250,10 @@ span#blogtitle, span#blogtitle a {
 	.highlight .lineno {
 		display: none;
 	}
+	
+	.highlight .line-numbers {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 500px) {

@@ -18,6 +18,14 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
   font-style: normal;
 }
 
+.highlight .line-numbers {
+  color: #ffffff;
+  background: #606060;
+  padding-left: 4px;
+  padding-right: 5px;
+  font-style: normal;
+}
+
 .psconsole {
 	background-color: #012456;
 	padding: 10px;
