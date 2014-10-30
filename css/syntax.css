@@ -1,4 +1,5 @@
 code { font-family: Consolas, Courier New, Courier, monospace; }
+.gist-file { font-family: Consolas, Courier New, Courier, monospace; }
 
 .highlight  {
   background: #ffffff;
@@ -18,12 +19,22 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
   font-style: normal;
 }
 
-.highlight .line-numbers {
+.gist-file .line-numbers {
   color: #ffffff;
   background: #606060;
   padding-left: 4px;
   padding-right: 5px;
   font-style: normal;
+  text-align: right;
+}
+
+.gist-meta {
+  padding: 7px;
+  background: #e0e0e0;
+}
+
+.gist-file .line-data {
+  padding: 7px;
 }
 
 .psconsole {
