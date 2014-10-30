@@ -225,6 +225,7 @@ span#blogtitle, span#blogtitle a {
 		position: relative;
 		top: -55px;
 		left: 10px;
+		display: none;
 	}
 
 	#aboutme hr {
