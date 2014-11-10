@@ -172,4 +172,4 @@ Invoke-SQLCmd ($SQLUpdate -f $BinarySid)</div>
 I'll talk about why I'm actually doing all this in another post.
 
 [sid]: http://msdn.microsoft.com/en-us/library/system.security.principal.securityidentifier.aspx
-[getprincipal]: {{ site.baseurl }}/blogscripts/get-principal.ps1
+[getprincipal]: {{ site.baseurl }}/blogscripts/Get-Principal.ps1
