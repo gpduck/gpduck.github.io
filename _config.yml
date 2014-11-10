@@ -6,3 +6,6 @@ baseurl: "http://blog.whatsupduck.net"
 
 paginate: 7
 paginate_path: "archive/page:num"
+
+gems:
+  - jekyll-sitemap
