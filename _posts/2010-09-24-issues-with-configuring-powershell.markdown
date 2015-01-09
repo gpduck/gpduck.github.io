@@ -62,7 +62,6 @@ Rather than constantly have to move our Exchange servers in and out of the GPO, 
     * Value type: ``REG_SZ``
     * Value data: ``RemoteSigned``
     * On the "Common" tab...<br />
-    <span>
     <ol>
       <li>Check Item-level targeting</li>
       <li>Press the "Targeting" button</li>
@@ -70,7 +69,6 @@ Rather than constantly have to move our Exchange servers in and out of the GPO, 
       <li>Name: PROCESSOR_ARCHITECTURE</li>
       <li>Value: AMD64</li>
     </ol>
-    </span>
 
 5. Verify that only the local settings are being applied and that the preference will reset the value if a user changes it:
 
