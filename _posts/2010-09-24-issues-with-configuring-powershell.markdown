@@ -61,7 +61,7 @@ Rather than constantly have to move our Exchange servers in and out of the GPO, 
     * Value name: ``ExecutionPolicy``
     * Value type: ``REG_SZ``
     * Value data: ``RemoteSigned``
-    * On the "Common" tab...
+    * On the "Common" tab...<br />
     <span>
     <ol>
       <li>Check Item-level targeting</li>
