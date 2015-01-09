@@ -48,7 +48,7 @@ Rather than constantly have to move our Exchange servers in and out of the GPO, 
 
     * Action: ``Update``
     * Hive: ``HKEY_LOCAL_MACHINE``
-    * Key Path: ``SOFTWARE\Microsoft\PowersShell\1\ShellIds\Microsoft.PowerShell``
+    * Key Path: ``SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell``
     * Value name: ``ExecutionPolicy``
     * Value type: ``REG_SZ``
     * Value data: ``RemoteSigned``
