@@ -3,6 +3,7 @@ layout: post
 title: "(Not) Using PowerShell v2 to View WSMan Data From ESX"
 tags: ["esx","powershell","vmware","wsman"]
 author: { link: "https://plus.google.com/111921112014612222144/about", name: Chris Duck }
+redirect_from: "/2009/09/not-using-PowerShell-v2%20to-view-wsman.html"
 ---
 Today I was trying to get at my "Health Status" data on my ESX servers though PowerShell using the tutorial posted on the PowerCLI Blog ([Monitoring ESX Hardware with Powershell][monitoringhw]), but I kept getting an "Access Denied" message.  I did a little more research into using WSMan in PowerShell and discovered that before V2, there was a way to use a COM object to query WSMan that gave you a little more control over the connection ([http://technet.microsoft.com/en-us/magazine/2007.11.heyscriptingguy.aspx][scriptingguy]).
 
