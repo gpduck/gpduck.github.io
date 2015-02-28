@@ -3,6 +3,7 @@ layout: post
 title: "Adding a Custom Certificate to McAfee ePO Server 4.0 (Apache)"
 tags: ["certificate","epo","java","ssl","tomcat"]
 author: { link: "https://plus.google.com/111921112014612222144/about", name: Chris Duck }
+redirect_from: "/2009/07/adding-a-custom-certificate-to-mcafee-epo.html"
 ---
 Our ePO adminitrators came to me asking for help installing an enterprise certificate on our new ePO 4.0 server so they could provide a vanity dns name for management to view reports. [According to McAfee][kb52736], this is not supported in 4.0, but will be a feature of 4.5. Knowing that ePO runs on Tomcat, I was pretty confident that I could get it working anyway... just remember that none of this is supported. If you need a supported solution on 4.0, I recommend adding the self signed certificate to your domain certificate trust list and using the computer name to access the site.
 
