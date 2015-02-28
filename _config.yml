@@ -9,3 +9,4 @@ paginate_path: "archive/page:num"
 
 gems:
   - jekyll-sitemap
+  - jekyll-redirect-from
