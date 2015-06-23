@@ -252,6 +252,14 @@ span#blogtitle, span#blogtitle a {
 		display: none;
 	}
 	
+	pre.line-numbers {
+		padding-left: .5em;
+	}
+	
+	pre[class*="language-"].line-numbers code {
+		padding-left: .5em;
+	}
+	
 	.gist-file .line-numbers {
 		display: none;
 	}
