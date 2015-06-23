@@ -29,7 +29,7 @@ $(function () {
 <script type="text/javascript">
 $(function() {
 	$("div.highlight > pre").each(function(i, e) {
-		var code = $("code")[0];
+		var code = $(e).children("code")[0];
 		e.className += ' line-numbers' + ' ' + code.className;
 		var lineCount = 1 + code.innerHTML.split("\n").length;
 		
