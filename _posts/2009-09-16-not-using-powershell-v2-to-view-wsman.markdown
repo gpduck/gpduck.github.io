@@ -9,7 +9,7 @@ Today I was trying to get at my "Health Status" data on my ESX servers though Po
 
 Here is a PowerShell script based on the PowerCLI script that uses the COM object from the Scripting Guy article (it assumes you're already connected to your Virtual Center server):
 
-{% highlight powershell linenos %}
+{% highlight powershell %}
 $vmhost = get-vmhost ""
 $view = get-view $vmhost.id
 
@@ -46,7 +46,7 @@ I decided to try and determine if the Powershell cmdlet was the culprit or if it
 
 What I found after a little digging is that in the CreateSessionObject function of the WSManHelper class, they are setting the credentials as follows:
 
-{% highlight csharp linenos %}
+{% highlight csharp %}
 if (credential != null)
 {
   NetworkCredential networkCredential = new NetworkCredential();

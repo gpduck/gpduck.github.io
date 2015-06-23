@@ -10,7 +10,7 @@ The current committed bytes and current commit limit are both available as memor
 
 Powershell can be used to call unmanaged APIs as described in [Powershell P/Invoke Walkthrough][holmes] by Lee Holmes. I used the information in Lee's post as well as the examples on [www.pinvoke.net][pinvoke] and the python solution by Mike Driscoll at [Python: Finding the Commit Charge Values in Windows][pythonpeak] to construct the following Powershell script to query for the committed bytes peak value:
 
-{% highlight powershell linenos %}
+{% highlight powershell %}
 <# 
 .SYNOPSIS 
     Returns the PeakCommitment value using NtQuerySystemInformation 

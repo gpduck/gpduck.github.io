@@ -19,7 +19,7 @@ Here is the script I came up with using a FileStream to write out the zero file.
 
 ##Write-ZeroesToFreeSpace.ps1##
 
-{% highlight powershell linenos %}
+{% highlight powershell %}
 <#
 .SYNOPSIS
  Writes a large file full of zeroes to a volume in order to allow a storage

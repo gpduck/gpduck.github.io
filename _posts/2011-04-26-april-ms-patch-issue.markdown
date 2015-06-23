@@ -10,7 +10,7 @@ The problem turns out to be an older patch (979744) and there is also an easy wa
 
 I wrote the following quick script to check all servers on our network for the bad version of the patch so we could get them all updated during our maintenance window, even if we weren't experiencing a problem with them at the time. This script queries your Active Directory to locate servers to check and then uses your current credentials to make a remote registry query to check the keys listed in the KB for the broken version of the patch. It assumes that you only have server computer objects in your OU and that you aren't running IA-64 based servers (it only checks 2008 x86, 2008 x64, and 2008 R2 registry paths). The script displays the computers with the broken patch on the screen as well as saving them to the $broken variable.
 
-{% highlight powershell linenos %}
+{% highlight powershell %}
 $RootOU = "ou=servers,dc=contoso,dc=com"
 $Timeout = 100
 

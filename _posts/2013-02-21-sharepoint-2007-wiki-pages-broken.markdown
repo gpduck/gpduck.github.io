@@ -10,7 +10,7 @@ I found a solution [here](http://social.technet.microsoft.com/forums/en-US/share
 
 The following script uses the SharePoint API to modify your list properties to enable the content types UI elements in your list settings in order to clean up your wiki content types.  I ran it from a SharePoint server in my farm, I assume it's possible to run remotely but have no idea how that would be done.
 
-{% highlight powershell linenos %}
+{% highlight powershell %}
 [reflection.assembly]::LoadWithPartialName("Microsoft.SharePoint")
 $Site = [Microsoft.SharePoint.SPSite]("http://site.com")
 $Web = $Site.OpenWeb("pat/to/web")
@@ -23,7 +23,7 @@ With this script, you can follow the instructions linked above to fix the conten
 
 After you have everything cleaned up, you can run the following script to return your wiki library to the default configuration.
 
-{% highlight powershell linenos %}
+{% highlight powershell %}
 [reflection.assembly]::LoadWithPartialName("Microsoft.SharePoint")
 $Site = [Microsoft.SharePoint.SPSite]("http://site.com")
 $Web = $Site.OpenWeb("pat/to/web")

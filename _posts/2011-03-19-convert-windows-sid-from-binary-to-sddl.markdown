@@ -10,7 +10,7 @@ At work I had a problem that required me to decode a SID that was stored in a da
 
 The first task was to get from the binary data from SQL into an appropriate .Net object. Browsing through MSDN, it looks like [System.Security.Principal.SecurityIdentifier][sid] would be a good choice :)
 
-{% highlight powershell linenos %}
+{% highlight powershell %}
 Add-PSSnapin SqlServerCmdletSnapin100
 
 $binsid = (Invoke-SQLCmd "SELECT operators_sid FROM [FIMDatabase].[mms_server_configuration]").operators_sid
@@ -21,7 +21,7 @@ $sid = new-object security.principal.securityidentifier($binsid, 0)
 
 Now that we have a SID object we can use that to convert the binary SID to a string and then use the string value to search either our local SAM database or an Active Directory Domain to locate the account the SID represents. For this task, I've written a script called [Get-Principal.ps1][getprincipal]:
 
-{% highlight powershell linenos %}
+{% highlight powershell %}
 <#
 .SYNOPSIS
 

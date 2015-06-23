@@ -12,7 +12,7 @@ In our search to explain what was going on, we located a couple of forum posts w
 
 Our steps mirrored [610176][] almost exactly, so I'm going to copy the reproduction steps from that bug here, with a few changes.
 
-{% highlight powershell linenos %}
+{% highlight powershell %}
 Function test
 {
   param([Parameter(Mandatory=$true)]

@@ -8,7 +8,7 @@ With all the SSL vulnerabilities that have come out recently, we've decided to d
 
 Here is the script that I came up with, it tries to create an SslStream to the server using all the protocols defined in [System.Security.Authentication.SslProtocols](http://msdn.microsoft.com/en-us/library/system.security.authentication.sslprotocols(v=vs.110).aspx) and outputs which were successful.
 
-{% highlight powershell linenos %}
+{% highlight powershell %}
 <#
 .DESCRIPTION
   Outputs the SSL protocols that the client is able to successfully use to connect to a server.
