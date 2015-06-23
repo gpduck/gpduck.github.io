@@ -248,7 +248,7 @@ span#blogtitle, span#blogtitle a {
 		margin-top: 10px;
 	}
 	
-	.highlight .lineno {
+	.highlight .line-numbers-rows {
 		display: none;
 	}
 	

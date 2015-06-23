@@ -25,3 +25,23 @@ $(function () {
 	});
 });
 </script>
+
+<script type="text/javascript">
+$(function() {
+	$("div.highlight > pre").each(function(i, e) {
+		var code = $("code")[0];
+		e.className += ' line-numbers' + ' ' + code.className;
+		var lineCount = 1 + code.innerHTML.split("\n").length;
+		
+		var lines = new Array(lineCount);
+		lines = lines.join("<span></span>");
+		
+		var lineNumbersWrapper = document.createElement("span");
+		lineNumbersWrapper.className = 'line-numbers-rows';
+		lineNumbersWrapper.innerHTML = lines;
+		
+		code.appendChild(lineNumbersWrapper);
+		console.log("Adding line numbers");
+	});
+});
+</script>
