@@ -1,4 +1,4 @@
-pygments: true
+highlighter: pygments
 permalink: /:year/:month/:title.html
 
 name: "What's Up Duck - Blog"
