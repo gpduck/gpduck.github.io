@@ -1,0 +1,19 @@
+{
+  "name": "blog.whatsupduck.net",
+  "version": "1.0.0",
+  "authors": [
+    "Chris Duck <gpduck@whatsupduck.net>"
+  ],
+  "license": "MIT",
+  "homepage": "blog.whatsupduck.net",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}
