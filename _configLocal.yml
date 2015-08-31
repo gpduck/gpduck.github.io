@@ -1,0 +1,3 @@
+highlighter: none
+exclude: ["sass"]
+baseurl: "http://localhost:4000"

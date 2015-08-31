@@ -1,3 +1,5 @@
+@import 'syntax_colors';
+
 /* http://prismjs.com/download.html?themes=prism-coy&languages=clike+csharp+powershell&plugins=line-highlight+line-numbers */
 /**
  * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
@@ -8,14 +10,14 @@
 code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
-	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	font-family: $CodeFonts;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5;
+	line-height: $line-height-computed;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -27,21 +29,23 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
+$CodeLineHeight: $line-height-computed * 2;
 /* Code blocks */
 pre[class*="language-"] {
 	position: relative;
 	margin: .5em 0;
-	-webkit-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
-	-moz-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
-	box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
-	border-left: 7px solid #358ccb;
+	-webkit-box-shadow: -1px 0px 0px 0px $PrimaryColor, 0px 0px 0px 1px #dfdfdf;
+	-moz-box-shadow: -1px 0px 0px 0px $PrimaryColor, 0px 0px 0px 1px #dfdfdf;
+	box-shadow: -1px 0px 0px 0px $PrimaryColor, 0px 0px 0px 1px #dfdfdf;
+	border-left: 4px solid $PrimaryColor;
 	background-color: #fdfdfd;
-	background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-	background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-	background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-	background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-	background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-	background-size: 3em 3em;
+	background-image: -webkit-linear-gradient(transparent 50%, $CodeLineHighlightColor 50%);
+	background-image: -moz-linear-gradient(transparent 50%, $CodeLineHighlightColor 50%);
+	background-image: -ms-linear-gradient(transparent 50%, $CodeLineHighlightColor 50%);
+	background-image: -o-linear-gradient(transparent 50%, $CodeLineHighlightColor 50%);
+	background-image: linear-gradient(transparent 50%, $CodeLineHighlightColor 50%);
+	background-position: 50% 0;
+	background-size: $CodeLineHeight $CodeLineHeight;
 	background-origin: content-box;
 	overflow: visible;
 	/* max-height: 30em; */
@@ -120,14 +124,15 @@ pre[class*="language-"]:after {
 
 }
 
+$CodeNumberPadding: 3.8em;
 
 /* Plugin styles: Line Numbers */
 pre[class*="language-"].line-numbers {
-	padding-left: 0;
+	padding-left: 3px;
 }
 
 pre[class*="language-"].line-numbers code {
-	padding-left: 3.8em;
+	padding-left: 3px;
 }
 
 pre[class*="language-"].line-numbers .line-numbers-rows {
@@ -136,7 +141,7 @@ pre[class*="language-"].line-numbers .line-numbers-rows {
 
 pre.line-numbers {
 	position: relative;
-	padding-left: 3.8em;
+	padding-left: 3px;
 	counter-reset: linenumber;
 }
 
@@ -145,21 +150,35 @@ pre.line-numbers > code {
 }
 
 .line-numbers .line-numbers-rows {
-	position: absolute;
-	pointer-events: none;
-	top: 0;
-	font-size: 100%;
-	left: -3.8em;
-	width: 3em; /* works for line-numbers below 1000 lines */
-	letter-spacing: -1px;
-	border-right: 1px solid #999;
-
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-
+	display: none;
 }
+
+@media (min-width: $screen-md-min) {
+	pre.line-numbers {
+		padding-left: $CodeNumberPadding;
+	}
+	
+	pre[class*="language-"].line-numbers code {
+		padding-left: $CodeNumberPadding;
+	}
+	
+	.line-numbers .line-numbers-rows {
+		position: absolute;
+		pointer-events: none;
+		top: 0;
+		font-size: 100%;
+		left: -3.8em;
+		width: 3em; /* works for line-numbers below 1000 lines */
+		letter-spacing: -1px;
+		border-right: 1px solid #999;
+	
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		display: block;
+	
+	}
 
 	.line-numbers-rows > span {
 		pointer-events: none;
@@ -167,13 +186,14 @@ pre.line-numbers > code {
 		counter-increment: linenumber;
 	}
 
-		.line-numbers-rows > span:before {
-			content: counter(linenumber);
-			color: #999;
-			display: block;
-			padding-right: 0.8em;
-			text-align: right;
-		}
+	.line-numbers-rows > span:before {
+		content: counter(linenumber);
+		color: #999;
+		display: block;
+		padding-right: 0.8em;
+		text-align: right;
+	}
+}
 
 
 
@@ -188,8 +208,10 @@ pre.line-numbers > code {
 
 
 
-code { font-family: Consolas, Courier New, Courier, monospace; }
-.gist-file { font-family: Consolas, Courier New, Courier, monospace; }
+code { 
+	font-family: $CodeFonts;
+}
+.gist-file { font-family: $CodeFonts; }
 
 .highlight  {
   background: #ffffff;
@@ -207,6 +229,7 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
   padding-left: 4px;
   padding-right: 5px;
   font-style: normal;
+  display: none;
 }
 
 .gist-file .line-numbers {
@@ -228,9 +251,14 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
 }
 
 .psconsole {
-	background-color: #012456;
+	background-color: $PowerShellBlue;
 	padding: 10px;
-	font-family: Consolas, Courier New, Courier, monospace;
+	font-family: $CodeFonts;
+	word-break: break-all;
+	white-space: pre-wrap;
+	br {
+		display: none;
+	}
 }
 
 .psconsole-error {
@@ -252,7 +280,7 @@ code { font-family: Consolas, Courier New, Courier, monospace; }
 .highlight .c1 { color: #006400; font-style: italic } /* Comment.Single */
 .highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #000000; background-color: #ffdddd; font-style: normal; } /* Generic.Deleted */
-.highlight .gd .x { color: #000000; background-color: #ffaaaa font-style: normal; } /* Generic.Deleted.Specific */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa; font-style: normal; } /* Generic.Deleted.Specific */
 .highlight .ge { font-style: italic } /* Generic.Emph */
 .highlight .gr { color: #aa0000; font-style: normal; } /* Generic.Error */
 .highlight .gh { color: #999999; font-style: normal; } /* Generic.Heading */

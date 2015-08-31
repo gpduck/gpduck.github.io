@@ -1,4 +1,4 @@
-pygments: true
+highlighter: pygments
 permalink: /:year/:month/:title.html
 
 name: "What's Up Duck - Blog"
@@ -10,3 +10,6 @@ paginate_path: "archive/page:num"
 gems:
   - jekyll-sitemap
   - jekyll-redirect-from
+
+kramdown:
+  smart_quotes: apos,apos,quot,quot

@@ -15,17 +15,17 @@ title: "Whats Up Duck"
 		<hr />
 	{% endfor %}
 	<div class="postnav">
-		<div class="postnav-previous">
+		<div class="col-xs-4 text-left">
 			{% if paginator.next_page %}
 				<a href="{{ site.baseurl }}{{ paginator.next_page_path }}" title="Older Posts">Older</a>
 			{% else %}
 				&nbsp;
 			{% endif %}
 		</div>
-		<div class="postnav-home">
+		<div class="col-xs-4 text-center">
 			<a href="{{ site.baseurl }}/" title="Home">Home</a>
 		</div>
-		<div class="postnav-next">
+		<div class="col-xs-4 text-right">
 			{% if paginator.previous_page %}
 				{% if paginator.previous_page == 1 %}
 					<a href="{{ site.baseurl }}/" title="Newer Posts">Newer</a>

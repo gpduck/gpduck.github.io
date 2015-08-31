@@ -1,0 +1,209 @@
+// colors
+$LightBlue: #336699; 
+$Orange: #ff9900;
+$BrightOrange: lighten($Orange, 10%);
+$PaleOrange: lighten($Orange, 20%);
+$AlmostWhite: #eeeeee;
+$LightGray: #999999;
+
+// my variables
+$PageTitleColor: #ffffff;
+$PrimaryColor: $LightBlue;
+$SecondaryColor: $Orange;
+$PageTitleFont: 'Cabin Sketch', cursive;
+$BodyFont: 'Open Sans', Helvetica, FreeSans, sans-serif;
+$PageBackgroundImageLo: '/images/DSC_1416_lo.jpg';
+$PageBackgroundImageHigh: '/images/DSC_1416.jpg';
+$DateFont: 'Open Sans', Helvetica, FreeSans, sans-serif;
+$ContentPadding: 15px;
+$ContentBackground: black;
+$ContentColor: $AlmostWhite;
+$CodeLineHighlight: $LightGray;
+
+// bootstrap variables
+$body-bg: $LightBlue;
+$brand-primary: $Orange;
+$link-hover-decoration: "none";
+$text-color: $AlmostWhite;
+$font-size-base: 18px;
+$font-size-small: $font-size-base * 0.9;
+$font-size-large: $font-size-base * 1.3;
+$grid-gutter-width: 20px;
+$headings-color: $PaleOrange;
+
+@import 'bootstrap-custom';
+
+html {
+	min-height: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: $BodyFont;
+	background: $body-bg;
+	min-height: 100%;
+	height: 100%;
+}
+
+p {
+	margin-top: $line-height-computed * 0.7;
+	margin-bottom: $line-height-computed * 0.7;
+}
+
+hr {
+	margin-top: $line-height-computed * 0.5;
+	margin-bottom: $line-height-computed * 0.5;
+	clear: both;
+}
+
+div.container-fluid {
+	background: transparent url(/images/black50.png) repeat scroll top left;
+	padding-top: 25px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#pageheader {
+	padding-left: $grid-gutter-width / 2;
+}
+
+span#blogtitle, span#blogtitle a {
+	font-family: $PageTitleFont;
+	font-style: normal;
+	font-variant: normal;
+	text-decoration: none;
+	color: $PageTitleColor;
+	font-size: $font-size-h1;
+}
+
+#content {
+	color: $ContentColor;
+	background: $ContentBackground;
+	padding-left: $ContentPadding;
+	padding-right: $ContentPadding;
+	padding-top: $ContentPadding;
+	padding-bottom: $ContentPadding;
+	display: block;
+}
+
+#sidebar {
+	padding-left: $grid-gutter-width / 2;
+	padding-right: 0px;
+	padding-bottom: $grid-gutter-width / 2;
+}
+
+.widgettitle {
+	color: $AlmostWhite;
+}
+
+#pagefooter {
+	font-size: $font-size-small;
+	padding-top: $grid-gutter-width / 2;
+	padding-bottom: $grid-gutter-width / 2;
+}
+
+.postdate {
+	display: block;
+	font-size: $font-size-small;
+	font-family: $DateFont;
+	color: $AlmostWhite;
+}
+
+.posttitle {
+	display: block;
+	margin: 0;
+	font-size: $font-size-large;
+	font-family: 'Bree Serif', serif;
+	color: $BrightOrange;
+	font-weight: bold;
+}
+
+.postexcerpt {
+	padding-left: 30px;
+}
+
+#postcontent {
+	$ContentMargin: 15px;
+	padding-left: $ContentMargin;
+	
+	h1, h2, h3, h4, h5, h6 {
+		margin-left: -$ContentMargin;
+	}
+	
+	h3 {
+		// use the h4 size for h3 instead of changing all the posts.
+		font-size: ceil(($font-size-base * 1.25)); 
+	}
+}
+
+#postfooter {
+	padding-top: $grid-gutter-width / 2;
+	font-size: $font-size-small;
+}
+
+#sharinglinks {
+	padding-top: $grid-gutter-width / 2;
+}
+
+.profileimage {
+	float: left;
+	padding-right: 10px;
+	margin-bottom: $line-height-base * $font-size-base / 2;
+}
+
+.profilename {
+	font-size: $font-size-base;
+	font-weight: bold;
+}
+
+.profilelink {
+	font-size: $font-size-small;
+}
+
+@media (min-width: $screen-sm-min) {
+	body {
+		background: $body-bg url($PageBackgroundImageLo) no-repeat fixed top center;
+		background-size: cover;
+	}
+	
+	div.container-fluid {
+		width: 94%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	body {
+		background: $body-bg url($PageBackgroundImageHigh) no-repeat fixed top center;
+		background-size: cover;
+	}
+	span#blogtitle, span#blogtitle a {
+		font-size: $font-size-h1 * 1.5;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	div.container-fluid {
+		width: 87%;
+	}
+}
+
+/*
+@media screen and (max-width: 360px) {
+	span#blogtitle, span#blogtitle a {
+		font-size: 39px;
+	}
+
+	#sidebar {
+		font-size: 11px;
+	}
+}
+*/
+
+@import 'syntax';
