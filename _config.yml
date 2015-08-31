@@ -10,3 +10,6 @@ paginate_path: "archive/page:num"
 gems:
   - jekyll-sitemap
   - jekyll-redirect-from
+
+kramdown:
+  smart_quotes: apos,apos,quot,quot

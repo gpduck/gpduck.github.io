@@ -21,7 +21,7 @@
 
 <div id="tagcloud" class="widget hidden-xs hidden-sm hidden-md">
 	<div class="widgettitle">Tag Cloud</div>
-	<div class="tagcloud">
+	<div class="tagcloud text-center">
 		{% for tag in site.tags %}  {% assign tagname = tag | first %}  {% assign tagweight = tag | last | size | times: 20 | divided_by: site.tags.size | plus: 10 %}
 			<a href="{{ site.baseurl }}/tag/{{ tagname }}.html" style="font-size: {{ tagweight }}px;">{{ tagname }}</a>
 		{% endfor %}
@@ -30,6 +30,6 @@
 </div>
 
 <div id="twitter" class="widget hidden-xs hidden-sm hidden-md">
-<a width="250" class="twitter-timeline widgettitle" href="https://twitter.com/gpduck" data-widget-id="368259538220105728" data-link-color="#ff9900 data-chrome="transparent">Tweets by @gpduck</a>
+<a class="twitter-timeline widgettitle" href="https://twitter.com/gpduck" data-widget-id="368259538220105728" data-link-color="#ff9900 data-chrome="transparent">Tweets by @gpduck</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>

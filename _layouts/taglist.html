@@ -4,15 +4,19 @@
 		{% include head.html %}
 	</head>
 	<body>
-		<div id="bodywrapper">
-			<div id="pageheader">
+		<div class="container-fluid">
+			<div class="row" id="pageheader">
 				<span id="blogtitle"><a href="/">What's Up Duck</a></span>
 			</div>
-			<div id="sidebar">
-				{% include sidebar.html %}
+			<div class="row">
+				<div id="sidebar" class="col-lg-3 col-lg-push-9">
+					{% include sidebar.html %}
+				</div>
+				<div id="content" class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-lg-pull-3">
+				{{ content }}
+				</div>
 			</div>
-			{{ content }}
-			<div id="pagefooter">
+			<div class="row text-center" id="pagefooter">
 				<div id="pagefootercontent">
 					{% include footer.html %}
 				</div>
