@@ -12,5 +12,3 @@ Task sass {
 Task Jekyll {
 	jekyll build --config "_config.yml,_configLocal.yml" --destination .\_site\
 }
-
-asdf
