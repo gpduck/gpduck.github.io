@@ -78,7 +78,7 @@ Here is the script that I came up with, it tries to create an SslStream to the s
          $RemoteCertificate = [System.Security.Cryptography.X509Certificates.X509Certificate2]$SslStream.RemoteCertificate
          $ProtocolStatus["KeyLength"] = $RemoteCertificate.PublicKey.Key.KeySize
          $ProtocolStatus["SignatureAlgorithm"] = $RemoteCertificate.SignatureAlgorithm.FriendlyName
-				 $ProtocolStatus["Certificate"] = $RemoteCertificate
+         $ProtocolStatus["Certificate"] = $RemoteCertificate
          $ProtocolStatus.Add($ProtocolName, $true)
        } catch  {
          $ProtocolStatus.Add($ProtocolName, $false)
