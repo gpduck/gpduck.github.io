@@ -2,9 +2,8 @@
 ! Title: Duck's Filter List
 ! Expires: 14 days
 ! Version : 1
-
 ! Dallas Morning New OutBrain element, hopefully more outbrain sections
 ##div.OUTBRAIN
-
+!
 arstechnica.com##footer#article-footer
 arstechnica.com##section#article-sidebar
