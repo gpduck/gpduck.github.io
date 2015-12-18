@@ -1,3 +1,4 @@
+[Adblock Plus 2.0]
 ! Title: Duck's Filter List
 ! Expires: 14 days
 ! Version : 1
